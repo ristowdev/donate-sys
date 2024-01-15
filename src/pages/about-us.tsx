@@ -9,6 +9,8 @@ import { IoMdArrowDown } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
+import HeaderNew from '@/components/header-new'
+import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,9 +25,91 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        
-       <Header />
+      <HeaderNew noFixed={true}/>
+
+
+      <div className='container'>
+        <div className='wrapper'>
+            <div className='lc-about-us'>
+              <div className='lspp-ppdapllsp-asp'>
+                  <h1>About RiseUpGram</h1>
+                  <p>RiseUpGram is the #1 and most trusted leader in online fundraising. We built our reputation by serving and supporting our community every step of the way.</p>
+              </div>
+
+              <div className='lcpsl-pdlapls'>
+                <div className='vsd-vl-sl'>
+
+                  <div className='dsppc-spdps-as'>
+                    <div className='clpsp--apspxlaq1a'>
+                      <h3>Trust</h3>
+                      <p>
+                      Our Trust & Safety team works around the clock to ensure your safety and protect against fraud. We also provide the first and only donor protection guarantee: the GoFundMe Giving Guarantee. With eight years of experience and the most money raised, GoFundMe has earned the trust of respected institutions and government officials around the world.                  
+                      </p>
+                    </div>
+
+                    <div className='lpxp-palcpla'>
+                      <img src="/t1.png" />
+                    </div>
+
+
+                  </div>
+                  <div className='dsppc-spdps-as'>
+                    <div className='clpsp--apspxlaq1a'>
+                      <h3>Trust</h3>
+                      <p>
+                      Our Trust & Safety team works around the clock to ensure your safety and protect against fraud. We also provide the first and only donor protection guarantee: the GoFundMe Giving Guarantee. With eight years of experience and the most money raised, GoFundMe has earned the trust of respected institutions and government officials around the world.                  
+                      </p>
+                    </div>
+
+                    <div className='lpxp-palcpla'>
+                      <img src="/t2.png" />
+                    </div>
+
+
+                  </div>
+
+                  <div className='dsppc-spdps-as'>
+                    <div className='clpsp--apspxlaq1a'>
+                      <h3>Trust</h3>
+                      <p>
+                      Our Trust & Safety team works around the clock to ensure your safety and protect against fraud. We also provide the first and only donor protection guarantee: the GoFundMe Giving Guarantee. With eight years of experience and the most money raised, GoFundMe has earned the trust of respected institutions and government officials around the world.                  
+                      </p>
+                    </div>
+
+                    <div className='lpxp-palcpla'>
+                      <img src="/t3.png" />
+                    </div>
+
+
+                  </div>
+
+                  <div className='dsppc-spdps-as'>
+                    <div className='clpsp--apspxlaq1a'>
+                      <h3>Trust</h3>
+                      <p>
+                      Our Trust & Safety team works around the clock to ensure your safety and protect against fraud. We also provide the first and only donor protection guarantee: the GoFundMe Giving Guarantee. With eight years of experience and the most money raised, GoFundMe has earned the trust of respected institutions and government officials around the world.                  
+                      </p>
+                    </div>
+
+                    <div className='lpxp-palcpla'>
+                      <img src="/t4.png" />
+                    </div>
+
+
+                  </div>
+
+                </div> 
+
+              </div>
+
+              <div className='lpdslvsp'>
+                <Link href="/projects"><button>Donate now</button></Link>
+              </div>
+            </div>
+        </div>
+      </div>
  
-       <div className='container-3'>
+       {/* <div className='container-3'>
         <div className='wrapper-3'>
           
           <div className='page-cpvdl'>
@@ -61,7 +145,7 @@ export default function Home() {
             </div>
             </div>
             </div>
-        </div>
+        </div> */}
 
       <Footer className='ablcdp2dw'/>
  

@@ -8,21 +8,26 @@ import { IoMdArrowDown } from "react-icons/io";
 
 
 interface IHeaderProps{
+    className?:string;
+    noFixed?:boolean;
 }
 
 export default function Header(props: IHeaderProps) {
-
+    const {
+        className,
+        noFixed=false
+    } = props;
     const [menuOpened, setOpenMenu] = React.useState<Boolean>(false);
 
     return (<>
 
-        
+        {!noFixed &&
         <div className='header-spacer'>
 
-        </div>
+        </div>}
         <div className='headervpdspvds'>
 
-        <div className='header'>
+        <div className={`header ${className}`}>
              
         <div className='container'>
             <div className='wrapper'>
@@ -33,7 +38,7 @@ export default function Header(props: IHeaderProps) {
                             <div className='logo'>
                                 <Link href="/">
                                     <div className='logo-1'>
-                                        {/* <img src="/nfc-logo-black.png" /> */}
+                                        {/* <img src="/rug-pro.png" /> */}
                                         <h1>Donatly</h1>
                                     </div>
                                 </Link>

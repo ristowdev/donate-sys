@@ -10,11 +10,25 @@ import { FaHeart } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
 import Link from 'next/link'
+import HeaderNew from '@/components/header-new'
+import { FiDelete, FiSearch } from 'react-icons/fi'
+import { useEffect, useRef, useState } from 'react'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Projects() {
+
+  const [inputVal, setInputValue] = useState<string>('');
+  const [nearYouOrTrending, setNYorTr] = useState<string>('trending')
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(()=>{
+    if(inputRef){
+      inputRef.current?.focus();
+    }
+  },[]);
+
   return (
     <>
       <Head>
@@ -24,140 +38,141 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        
-      <Header />
+      <HeaderNew noFixed={true}/>
 
-
-      <div className='container'> 
-        <div className='wrapper'> 
-          <div className='vlvdsppvsddsdcvd'>
-            <div className='vlvlcldspppfwep'>
-              <h1>Projects</h1>
-            </div>
-
-            <div className='list-fundraisers-row vkkvlfdvldfflvlf'>
-
-
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
-                  <div className='fundraiser-single-l-r'>
-                    <div className='fslr-p'>
-                        <div className='fslr-p-img'>
-                          <img src="/tsclv.png" />
-                        </div>
-                        <div className='flpr-pet-te'>
-                          <h1>Help Turkey and Syira <br/>Earthquake Relief Fund</h1>
-
-                          <p>Since 2006, SOIL has been working in urban...</p>
-                        </div>
-
-                        <div className='lvldvfdps-raised'>
-                          <span>$90,294</span>
-                          <label>raised  of $100,000 goal</label>
-                        </div>
-
-                        <div className='lslv-ra-goal'>
-                          <div className='lsvl-goal-progess-bar'>
-                            <div className='lvl-pb-progress'></div>
-                          </div>
-                        </div>
-
-                        <div className='slc-total-supporters'>
-                          <div className='cpvpvpvfffw1ew'>
-                            <div className='clvlvfpppp'>
-                              <FaHeart size={20} color='#E86273'/>
-                            </div>
-                            <div className='pvpd-vdsvs'>
-                              <span>10,583 Supporters</span>
-                            </div>
-                          </div>
-                          <div className='d-type-dpv'>
-                            <span>Medical</span>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
-                  <div className='fundraiser-single-l-r'>
-                    <div className='fslr-p'>
-                        <div className='fslr-p-img'>
-                          <img src="/tsclv.png" />
-                        </div>
-                        <div className='flpr-pet-te'>
-                          <h1>Help Turkey and Syira <br/>Earthquake Relief Fund</h1>
-
-                          <p>Since 2006, SOIL has been working in urban...</p>
-                        </div>
-
-                        <div className='lvldvfdps-raised'>
-                          <span>$90,294</span>
-                          <label>raised  of $100,000 goal</label>
-                        </div>
-
-                        <div className='lslv-ra-goal'>
-                          <div className='lsvl-goal-progess-bar'>
-                            <div className='lvl-pb-progress'></div>
-                          </div>
-                        </div>
-
-                        <div className='slc-total-supporters'>
-                          <div className='cpvpvpvfffw1ew'>
-                            <div className='clvlvfpppp'>
-                              <FaHeart size={20} color='#E86273'/>
-                            </div>
-                            <div className='pvpd-vdsvs'>
-                              <span>10,583 Supporters</span>
-                            </div>
-                          </div>
-                          <div className='d-type-dpv'>
-                            <span>Medical</span>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </Link>
-
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
-                  <div className='fundraiser-single-l-r'>
-                    <div className='fslr-p'>
-                        <div className='fslr-p-img'>
-                          <img src="/tsclv.png" />
-                        </div>
-                        <div className='flpr-pet-te'>
-                          <h1>Help Turkey and Syira <br/>Earthquake Relief Fund</h1>
-
-                          <p>Since 2006, SOIL has been working in urban...</p>
-                        </div>
-
-                        <div className='lvldvfdps-raised'>
-                          <span>$90,294</span>
-                          <label>raised  of $100,000 goal</label>
-                        </div>
-
-                        <div className='lslv-ra-goal'>
-                          <div className='lsvl-goal-progess-bar'>
-                            <div className='lvl-pb-progress'></div>
-                          </div>
-                        </div>
-
-                        <div className='slc-total-supporters'>
-                          <div className='cpvpvpvfffw1ew'>
-                            <div className='clvlvfpppp'>
-                              <FaHeart size={20} color='#E86273'/>
-                            </div>
-                            <div className='pvpd-vdsvs'>
-                              <span>10,583 Supporters</span>
-                            </div>
-                          </div>
-                          <div className='d-type-dpv'>
-                            <span>Medical</span>
-                          </div>
-                        </div>
-                    </div>
-                  </div>
-                </Link>
-
+      <div className='container'>
+        <div className='wrapper'>
+          <div className='lzppx---zpasppxlal-as'>
+              <div className='lzp-c-app---asp'>
+                  <h1>Search fundraisers on RiseUpGram</h1>
+                  <p>Find fundraisers by location, title, keyword, or a person’s name</p>
               </div>
+              <div className='pz--appz-psdlalpdpass'>
+                  <div className='zp-ppadplldsl'>
+                    <FiSearch  size={18} color='#333333'/>
+                  </div>
+                  <input 
+                    placeholder='Search' 
+                    onChange={(e)=>{setInputValue(e.target.value)}}
+                    value={inputVal}
+                    ref={inputRef}
+                  />
+                  {inputVal &&
+                  <div className='px-pappslxpal'>
+                    <button onClick={()=>{setInputValue('')}}>
+                      <FiDelete color='#333333' size={18} style={{marginLeft:'-5px'}}/>
+                    </button>
+                  </div>
+                  }
+              </div>
+
+              <div className='ppxzp--ps-pac-pcpaslpl-ap'>
+                  <div className='xlpap-xpa--pzaplaxa'>
+                    <button className={`${nearYouOrTrending === 'trending' ? 'zppapplslls' : 'zlppppspsplll'}`} onClick={()=>setNYorTr('trending')}>Trending</button>
+                    <button className={`${nearYouOrTrending === 'nearyou' ? 'zppapplslls' : 'zlppppspsplll'}`} onClick={()=>setNYorTr('nearyou')}>Near you</button>
+                  </div>
+              </div>
+
+
+              <div className='lcpsplcpl'>
+              {Array.from({ length: 30 }, (_, index) => (
+
+                  <div className='dlapslpcsa'>
+                    <Link href="/project/dlaslp">
+                      <div className='lzppals'> 
+                        
+                        <div className='z-cp-cpl-llllps'>
+                            <img src="happyf.png" />
+                        </div>
+                        <div className='lelpwleplfw--wepfep'>
+                          <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
+                          <span>by Eric Woody</span>
+                          
+                          <div className='lslv-ra-goal fd3as kfkldsk'>
+                            <div className='lsvl-goal-progess-bar' style={{background:'#e6f5ef'}}>
+                              <div className='lvl-pb-progress' style={{background:'#02a95c'}}></div>
+                            </div>
+                          </div>
+                          <div className='lvldvfdps-raised flllall lldlppalsl'>
+                            <span>$90,294</span>
+                            <label>raised</label>
+                          </div>
+                        </div>
+                      </div>
+
+
+                    </Link>
+                      </div>
+
+                    ))}
+
+                      
+              </div>
+
+              {/* <div className='pzpc--sdpapdalp-pdsap-spdapllxlasp-d-a-sp'>
+                  <div className='psp-xpp-adplxpas'>
+                    <div className='z-cp-cpl-llllps'>
+                        <img src="happyf.png" />
+                    </div>
+                    <div className='lelpwleplfw--wepfep'>
+                      <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
+        
+                 
+                    </div>
+                  </div>
+
+                  <div className='pcppppxa'>
+                    <div className='clpas-pdlaplds'>
+
+
+                      <div className='pcpalsplpsa' style={{marginLeft:0}}>
+
+                        <div className='z-cp-cpl-llllps'>
+                            <img src="happyf.png" />
+                        </div>
+                        <div className='lelpwleplfw--wepfep'>
+                          <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
+                       
+                        </div>
+
+                      </div>
+
+
+                      <div className='pcpalsplpsa'>
+                        
+                        <div className='z-cp-cpl-llllps'>
+                            <img src="happyf.png" />
+                        </div>
+                        <div className='lelpwleplfw--wepfep'>
+                          <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
+                          
+                        
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div className='clpas-pdlaplds'>
+
+
+                      <div className='pcpalsplpsa' style={{marginLeft:0}}>
+
+                        <div className='z-cp-cpl-llllps'>
+                            <img src="happyf.png" />
+                        </div>
+                        <div className='lelpwleplfw--wepfep'>
+                          <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
+                        
+                        </div>
+
+                      </div>
+
+
+                      
+                    </div>
+                  </div>
+ 
+              </div> */}
           </div>
         </div>
       </div>

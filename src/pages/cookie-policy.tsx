@@ -9,6 +9,7 @@ import { IoMdArrowDown } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
+import HeaderNew from '@/components/header-new'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,11 +23,10 @@ export default function PrivacyPolicy() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-       
-      <Header />
+      <HeaderNew noFixed={true}/>
 
-      <div className='container-3'>
-        <div className='wrapper-3'>
+      <div className='container'>
+        <div className='wrapper'>
           
           <div className='page-cpvdl'>
             <div className='vlvldfpppspsp'>

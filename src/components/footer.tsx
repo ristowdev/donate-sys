@@ -24,9 +24,17 @@ export default function Footer(props: IFooterProps) {
                             <div className='vpdfvlsdpf'>
 
                                 <div className='lvovldp-pds'>
-                                    <div className='lvodologo'>
-                                        <h1>Donatly</h1>
+                                    <div style={{display:'flex'}}>
+
+                                        <Link href="/">
+                                            <div className='lvodologo'>
+                                                {/* <h1>Donatly</h1> */}
+                                                <img src="/rog-pro-white-pro.png" />
+                                            </div>
+                                        </Link>
                                     </div>
+
+
                                     <div className='goccdlfl'>
                                         <p>Great futures are build with a small charity</p>
                                     </div>
@@ -36,29 +44,29 @@ export default function Footer(props: IFooterProps) {
 
                                     <div className='vldps--cdsp'>
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Our Work</span></Link>
+                                            <Link href="/about-us"><span>About us</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Our Story</span></Link>
+                                            <Link href="/contact"><span>Contact</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Partner with Us</span></Link>
+                                            <Link href="/how-it-works"><span>How it Works</span></Link>
                                         </div>
                                     </div>
 
                                     <div className='vldps--cdsp'>
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Donate</span></Link>
+                                            <Link href="/sign-in"><span>Sign in</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Careers</span></Link>
+                                            <Link href="/start-a-riseupgram"><span>Start a RiseUpGram</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
-                                            <Link href="#"><span>Internships</span></Link>
+                                            <Link href="/projects"><span>Fundraisers</span></Link>
                                         </div>
                                     </div>
 
@@ -103,16 +111,19 @@ export default function Footer(props: IFooterProps) {
                             <div className='cldspcds'>
 
                                 <div className='vlvlfodspf'>
-                                    <p>© 2024 All rights are reserved - Donatly.</p>
+                                    <p>© 2024 All rights are reserved - RiseUpGram.</p>
                                 </div>
 
                                 <div className='vlvfpddfvp'> 
                                 <div className='rp-ba-d-n-btn sdccdlcdppp'>
+                                    <Link href="/projects">
                                     <button><span>Donate now</span>
                                         <div className='rpbdn-btn'>
                                         <IoMdArrowDown color="black" size={23} className='sdpap-ss--acv'/>
                                         </div>
                                     </button>
+                                    </Link>
+
                                 </div>
                                 </div>
 

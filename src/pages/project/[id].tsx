@@ -15,10 +15,10 @@ import Link from 'next/link'
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { GrLineChart } from "react-icons/gr";
 import ShareModal from '@/components/share-modal'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import AllDonationsModal from '@/components/all-donation-modal'
 import { useRouter } from 'next/router'
-
+import HeaderNew from '@/components/header-new'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,6 +27,54 @@ export default function Home() {
   const [shareModelOpened, setShareModelOpened] = useState<Boolean>(false);
   const [allDonationsModelOpened, setAllDonationsModelOpened] = useState<Boolean>(false);
   const router = useRouter();
+
+  const [showBottomButtons, setBottomButtons] = useState<boolean>(false);
+
+  
+  useEffect(()=>{
+    if (shareModelOpened || allDonationsModelOpened) {
+        document.documentElement.classList.add('body-scroll-lock');
+      } else {
+        document.documentElement.classList.remove('body-scroll-lock');
+      }
+  }, [shareModelOpened, allDonationsModelOpened]);
+
+  const buttonListRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.3,
+    };
+
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Buttons are still in view
+          setBottomButtons(false);
+        } else {
+          setBottomButtons(true);
+          // Buttons are out of view
+          // You can dispatch an action, set a state, or perform any other action
+          // to indicate that the buttons are out of view
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+
+    if (buttonListRef.current) {
+      observer.observe(buttonListRef.current);
+    }
+
+    return () => {
+      if (buttonListRef.current) {
+        observer.unobserve(buttonListRef.current);
+      }
+    };
+  }, []);
+
 
   return (
     <>
@@ -37,14 +85,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        
-      <Header />
+      {/* <Header className='xpaps' noFixed={true}/> */}
+      <HeaderNew noFixed={true}/>
+
 
 
       <div className='container'> 
         <div className='wrapper'> 
 
           <div className='main-pro-cld'>
-          <h1>I need money to save the world help me </h1>
+          <h1 className='lclpapas'>I need money to save the world help me </h1>
 
             <div className='vlpsdps'>
               
@@ -54,6 +104,45 @@ export default function Home() {
                 <div className='vpdssppsd'>
                   <img src="/viuu.png" />
                 </div>
+
+                <h1 className='lclpapa1-1-s'>I need money to save the world help me </h1>
+                
+
+
+                <div className='lxlllxlla'>
+                 
+                    <div className='lslv-ra-goal fd3as'>
+                      <div className='lsvl-goal-progess-bar' style={{background:'#e6f5ef'}}>
+                        <div className='lvl-pb-progress' style={{background:'#02a95c'}}></div>
+                      </div>
+                    </div>
+
+                    <div className='lvldvfdps-raised'>
+                      <span>$90,294</span>
+                      <label>raised  of $100,000 goal</label>
+                      <div className='sllslss'>
+                        <p className='sxazzz'>•</p>
+                        {/* <p className='xxpppapzp'><b>3.1K</b></p> */}
+                        <p className='lzlla'><a style={{color:'black', marginRight:'5px'}}>3.1K</a> donations</p>
+                      </div>
+                    </div>
+
+                    {/* <div className='vldsps'>
+                      <span><b><label style={{color:'black'}}>3.1K</label></b> donations</span>
+                    </div> */}
+
+                    <div className='btns-action-clas' >
+                        <div className='vlpvs--dcspcs-cd1cwdf'>
+                          <button onClick={()=> {setShareModelOpened(true)}}>Share</button>
+                        </div>  
+                        <div className='vlpvs--dcspcs-cd1cwdf-1' ref={buttonListRef}>
+                          <button onClick={()=>{
+                              router.push('/donate/83d01000123dfw')
+                          }}>Donate now</button>
+                        </div>  
+                    </div>
+                </div>
+                
 
 
                 <div className='pc-1pdq'>
@@ -67,8 +156,8 @@ export default function Home() {
 
 
                   <div className='timc-ecl'>  
-                    <div className='clcprtme'>
-                      <span>Created 2 d ago</span>
+                    <div className='clcprtme dkkkksalls'>
+                      <span><div>Created</div> 2 d ago</span>
                     </div>
                     <div className='vldpsp3d33'>
                       <span>•</span>
@@ -94,29 +183,111 @@ export default function Home() {
                     <br/>
                     <br/>
                     She has been placed in an induced coma and is in a critical condition. We are raising funds to enable us as a family to stay with her. Unfortunately things are not looking good and we as a family are unable to finance staying with our mum. Please help us stay with her. Any donations would be gratefully received.
-                    <br/>
-                    <br/>
-                    Our family is stunned by the outpouring of support this fundraiser has generated. We've increased our fundraising goal in response and are so incredibly grateful for the community's generosity.
+                   
+                    
+                    {/* <br/>
+                    <br/> */}
+                    {/* Our family is stunned by the outpouring of support this fundraiser has generated. We've increased our fundraising goal in response and are so incredibly grateful for the community's generosity.
                     <br/>
                     <br/>
   We have been fielding many questions from individuals and media, and want to reassure everyone that the Ambrosio children, while now without their parents, have always had the presence and support of a large extended family that will ensure they are raised together in a safe and loving home.
   <br/>
                     <br/>
   We ask that you please respect the memory of Jen and Ryan by granting the family privacy during this difficult time.
-                    
+                     */}
                     </p>
+                    <div className='lxppapldadas'></div>
+                    
                   </div>
+                  <div className='zlpas'>
+                      <button>Read more</button>
+                    </div>
 
                   <div className='donate-share-btns'>
 
                     <div className='dsb-b-do'>
-                      <button>Donate</button>
+                      <button onClick={()=>{
+                            router.push('/donate/83d01000123dfw')
+                        }}>Donate</button>
                     </div>
 
                     <div className='dsb-b-do fvlf'>
                       <button onClick={()=>{setShareModelOpened(true)}}>Share</button>
                     </div>
                   </div>
+
+
+                  <div className='xlpzpappa'>
+                    <div className='zlpapsld'>
+                        <h1>Donations <button onClick={()=>{setAllDonationsModelOpened(true)}}>(3120)</button></h1>
+                    </div>
+                    <div className='dfgvbfv4 pfpdsa'>
+                      <div className='vmnbmfk'>
+                        <GrLineChart size={20} color='#6d2e91'/>
+                      </div>
+                      <div className='pvoble12'>
+                        <span>3.1K people just donated</span>
+                      </div>
+                    </div>
+
+                    <div className='vpd1wsda'>
+                      <div className='vpdps-1sdq'>
+                          <div className='vlisd-vsd1'>
+                            <FaHandHoldingHeart size={21}/>
+                          </div>
+                          <div className='vpds-p1sqw'>
+                            <div className='flwe-1-d--fwe'>
+                              <span>Andrea Stainbrook</span>
+                            </div>
+
+                            <div className='c-p1sl'>
+                              <span>$5,000</span>
+                              <div className='casp-1sa'><p>•</p></div>
+                              <label>3 mins</label>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div className='vpdps-1sdq'>
+                          <div className='vlisd-vsd1'>
+                            <FaHandHoldingHeart size={21}/>
+                          </div>
+                          <div className='vpds-p1sqw'>
+                            <div className='flwe-1-d--fwe'>
+                              <span>Andrea Stainbrook</span>
+                            </div>
+
+                            <div className='c-p1sl'>
+                              <span>$5,000</span>
+                              <div className='casp-1sa'><p>•</p></div>
+                              <label>3 mins</label>
+                            </div>
+                          </div>
+                      </div>
+
+                      <div className='vpdps-1sdq'>
+                          <div className='vlisd-vsd1'>
+                            <FaHandHoldingHeart size={21}/>
+                          </div>
+                          <div className='vpds-p1sqw'>
+                            <div className='flwe-1-d--fwe'>
+                              <span>Andrea Stainbrook</span>
+                            </div>
+
+                            <div className='c-p1sl'>
+                              <span>$5,000</span>
+                              <div className='casp-1sa'><p>•</p></div>
+                              <label>3 mins</label>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    
+                    <div className='clspaq-pwqqqq'>
+                      <button onClick={()=>{setAllDonationsModelOpened(true)}}>See all</button>
+                    </div>
+                  </div>
+
 
                   <div className='fr-team'>
                     <div className='vldpspd'>
@@ -308,8 +479,20 @@ export default function Home() {
       {shareModelOpened &&  <ShareModal setShareModelOpened={setShareModelOpened}/>}
 
       {allDonationsModelOpened && <AllDonationsModal setAllDonationsModelOpened={setAllDonationsModelOpened}/> }
-
-      <Footer className='home-footer'/>
+      
+      {showBottomButtons && <>
+        <div className='xppa-ppxpa'>
+            <div className='vlpvs--dcspcs-cd1cwdf flpwlfpw'>
+              <button onClick={()=> {setShareModelOpened(true)}}>Share</button>
+            </div>  
+            <div className='vlpvs--dcspcs-cd1cwdf-1 lflsls' ref={buttonListRef}>
+              <button onClick={()=>{
+                  router.push('/donate/83d01000123dfw')
+              }}>Donate now</button>
+            </div>  
+        </div>
+      </>}
+      <Footer className='home-footer kdkakkkkakaka'/>
  
       
     </>

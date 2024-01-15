@@ -9,6 +9,8 @@ import { IoMdArrowDown } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
+import HeaderNew from '@/components/header-new'
+import Link from 'next/link'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
        
-       <Header />
+       <HeaderNew />
 
       <div className='container'> 
         <div className='wrapper'> 
@@ -36,7 +38,7 @@ export default function Home() {
                   <p>The world largest fundraising platform, <br/>optimized for your charity in a more easy way</p>
                   <div className='ctas-buttons'>
                     <div className='ctas-btns-donate-btn ctas-btn-overall'>
-                      <button>Donate now</button>
+                      <Link href="/projects"><button>Donate now</button></Link>
                     </div>
                     <div className='ctas-btns-watch-btn ctas-btn-overall'>
                       <button><div style={{marginRight:'11px',display:'flex',alignItems:'center',justifyContent:'center'}}><FaPlay size={14}/></div> Watch video</button>
@@ -117,15 +119,20 @@ export default function Home() {
                 <div className='dppv-bfpdfbdbdf'>
 
                 <div className='rp-ba-d-n-btn mmkkklll'>
+                            <Link href="/projects">
                             <button><span>Join community</span>
                               <div className='rpbdn-btn'>
                               <IoMdArrowDown color="white" size={28} className='sdpap-ss--acv'/>
                               </div>
                             </button>
+                            </Link>
+
                       </div>
 
                       <div className='ldvlsppclllxx'>
+                      <Link href="/projects">
                         <button><span>Join community</span></button>
+                        </Link>
                       </div>
                 </div>
               </div>
@@ -163,11 +170,13 @@ export default function Home() {
                     <div className='dpdpdpdpdppp'>
 
                         <div className='rp-ba-d-n-btn'>
+                        <Link href="/projects">
                           <button style={{background:'#A6CA5B', border:'none', color:'#1D2A21'}}><span>Explore more</span>
                             <div className='rpbdn-btn' style={{background:'#243124'}}>
                             <IoMdArrowDown color="#D9FE70" size={28} className='sdpap-ss--acv'/>
                             </div>
                           </button>
+                          </Link>
                     </div>
                 </div>
 
@@ -502,8 +511,10 @@ export default function Home() {
 
                       <div className='cta-vnm-btn-fvl'>
                         <label>people already joining</label>
-                        <button className='vldlsvl'>Yes, I want to join community</button>
-                        <button className='vldlsvl-1'>Join community</button>
+                        <Link href="/projects"><button className='vldlsvl'>Yes, I want to join community</button></Link>
+                        
+
+                        <Link href="/projects"><button className='vldlsvl-1'>Join community</button></Link>
                       </div>
                     </div>
 

@@ -5,6 +5,7 @@ import { TfiClose } from "react-icons/tfi";
 import { IoCheckmarkOutline } from "react-icons/io5";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 
 interface IAllDonationsModalProps{
@@ -19,7 +20,7 @@ export default function AllDonationsModal(props: IAllDonationsModalProps) {
         setAllDonationsModelOpened
     } = props;
 
-    const times = 40;
+    const router = useRouter();
 
 
     return (<>
@@ -64,7 +65,7 @@ export default function AllDonationsModal(props: IAllDonationsModalProps) {
 
                     <div className='dqllqp-111psdl'>
                         <span>Join this list.</span>
-                        <Link href="">Donate now.</Link>
+                        <Link href="/donate/83d01000123dfw">Donate now.</Link>
                     </div>
 
 
@@ -150,7 +151,11 @@ export default function AllDonationsModal(props: IAllDonationsModalProps) {
                 </div>
 
                 <div className='vb-re-bpeee'>
-                    <button>Dontate now</button>
+                    {/* <button>Dontate now</button> */}
+                    
+                    <button onClick={()=>{
+                            router.push('/donate/83d01000123dfw')
+                        }}>Donate now</button>
                 </div>
                 {/* <div className='modal-content'>
                     
