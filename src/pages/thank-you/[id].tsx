@@ -5,7 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { FILES_URL } from "../../../config";
+import { BASE_URL, FILES_URL } from "../../../config";
 
 export default function Home() {
 
@@ -74,7 +74,7 @@ export default function Home() {
             };
 
             try {
-            const response = await fetch('http://localhost:5003/api/global/write-message', {
+            const response = await fetch(`${BASE_URL}/global/write-message`, {
                 method: 'PUT',
                 headers: {
                 'Content-Type': 'application/json',
@@ -175,6 +175,9 @@ export default function Home() {
                                 <button 
                                     onClick={()=>{handleSendMessage()}} 
                                     disabled={loading}
+                                    style={{
+                                        color:'white'
+                                    }}
                                 >
                                     
                                     {loading ? <div className="spinner">

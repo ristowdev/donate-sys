@@ -69,7 +69,7 @@ export default function Home() {
                     <div className='dpdpdpdpdppp azlal'>
 
                         <div className='rp-ba-d-n-btn'>
-                          <button><span>Donate now</span>
+                          <button><span style={{color:'white'}}>Donate now</span>
                             <div className='rpbdn-btn'>
                             <IoMdArrowDown color="#043F2E" size={28} className='sdpap-ss--acv'/>
                             </div>
@@ -524,9 +524,23 @@ export default function Home() {
           </div>
 
       </div>
+      
 
+      <div className='fourth-section'>  
 
-      <div className='fourth-section'>
+          <div className='track-main'>
+              <div className='tcm-fts-s'>
+                  <span>let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other </span>
+              </div>
+
+              <div className='tcm-fts-s ag-v-as'>
+                  <span>let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other * let's help each other </span>
+              </div>
+          </div>
+
+      </div>
+
+      {/* <div className='fourth-section'>
           <div className='track-main'>
 
             <div className='tcm-fts-s'>
@@ -622,7 +636,7 @@ export default function Home() {
             </div>
             
           </div> 
-      </div>
+      </div> */}
 
 
 
