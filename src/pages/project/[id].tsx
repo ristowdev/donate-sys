@@ -134,12 +134,11 @@ export default function Home() {
 
   return (
     <>
+
+
       <Head>
-        <title>{isLoading ? `RiseUpGram: Loading...` : `Fundraiser by ${fundraiserDetails.organizer} : ${fundraiserDetails.title}`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-
       
 
 
@@ -160,27 +159,18 @@ export default function Home() {
               height: 600,
               alt: '',
               type: 'image/jpeg',
-            }
-            // {
-            //   url: 'https://www.example.ie/og-image-02.jpg',
-            //   width: 900,
-            //   height: 800,
-            //   alt: 'Og Image Alt Second',
-            //   type: 'image/jpeg',
-            // },
-            // { url: 'https://www.example.ie/og-image-03.jpg' },
-            // { url: 'https://www.example.ie/og-image-04.jpg' },
+            } 
           ],
           siteName: 'RiseUpGram',
         }}
         facebook={{
           appId:'1787186335128133'
         }}
-        // twitter={{
-        //   handle: '@handle',
-        //   site: '@site',
-        //   cardType: 'summary_large_image',
-        // }}
+        twitter={{
+          handle: '@handle',
+          site: '@site',
+          cardType: 'summary_large_image',
+        }}
       />
        
       {/* <Header className='xpaps' noFixed={true}/> */}
