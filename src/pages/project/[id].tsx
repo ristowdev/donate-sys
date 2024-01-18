@@ -25,6 +25,8 @@ import ButtonsSticky from '@/components/buttons-sticky'
 import parse, { domToReact } from 'html-react-parser';
 import { FILES_URL, SITE_URL } from '../../../config'
 import { NextSeo } from 'next-seo'
+import { GetServerSideProps } from 'next'
+import SEOpro from '@/components/SEO-pro'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -138,13 +140,14 @@ export default function Home() {
 
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <SEOpro title='RiseUpGram: Donate now.'/>
       </Head>
       
 
 
       {isLoading ? <Loading /> : fundraiserDetails && <>
       
-      <NextSeo
+      {/* <NextSeo
         title={`Fundraiser by ${fundraiserDetails.organizer} : ${fundraiserDetails.title}`}
         description={fundraiserDetails.short_desc}
         canonical={SITE_URL}
@@ -171,7 +174,7 @@ export default function Home() {
           site: '@site',
           cardType: 'summary_large_image',
         }}
-      />
+      /> */}
        
       {/* <Header className='xpaps' noFixed={true}/> */}
       <HeaderNew noFixed={true}/>
@@ -498,3 +501,16 @@ export default function Home() {
     </>
   )
 } 
+
+
+// export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+//   const id = params?.id;
+//   // Fetch data for the specific ID from the database
+//   // const fundraiserDetails = /* logic to fetch data based on id */;
+
+//   return {
+//     props: {
+//       fundraiserDetails,
+//     },
+//   };
+// };
