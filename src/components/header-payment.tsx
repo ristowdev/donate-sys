@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useRef } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
+import { SITE_URL } from "../../config";
 
 
 interface IPaymentHeaderProps{
@@ -20,7 +21,7 @@ export default function PaymentHeader(props: IPaymentHeaderProps) {
             <div className="wrapper">
               <div className="vlpdpx-palda">
                 <div className="dlaps-x-asaa">
-                  <Link href={`http://localhost:3000/project/${fundraiserId}`}>
+                  <Link href={`${SITE_URL}/project/${fundraiserId}`}>
                   <div className="dps-x-pa-ps">
                     <MdOutlineArrowBackIosNew  size={22} color="#333333"/>
                     <span className="vp-apsa">Fundraiser</span>
@@ -35,7 +36,7 @@ export default function PaymentHeader(props: IPaymentHeaderProps) {
 
 
                 <div className="clalpsdl1"> 
-                  <Link href="http://localhost:3000/sign-in" >Sign in</Link>
+                  <Link href={`${SITE_URL}/sign-in`} >Sign in</Link>
                 </div> 
 
 
