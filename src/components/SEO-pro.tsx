@@ -13,7 +13,7 @@ export default function SEOpro(props: ISEOProProps) {
     } = props;
      
 
-    return (<>  
+    return (<>
             <NextSeo
                 title={title}
                 description={"Join our crowdfunding community to support and fund meaningful causes. Start or contribute to campaigns that make a difference."}

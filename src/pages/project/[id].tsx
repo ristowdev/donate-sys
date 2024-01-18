@@ -140,8 +140,8 @@ export default function Home() {
 
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <SEOpro title='RiseUpGram: Donate now.'/>
       </Head>
+      <SEOpro title='RiseUpGram: Donate now.'/>
       
 
 

@@ -15,6 +15,7 @@ import { FaCheck } from "react-icons/fa";
 import Link from 'next/link'
 import Loading from '@/components/loading'
 import { useRouter } from 'next/router'
+import { PAYMENT_PROCESSOR_URL } from '../../../config'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -46,7 +47,7 @@ export default function Donate() {
       <div className='cpspplxa'>
         {/* {iframeLoading && <Loading />} */}
 
-        <iframe src={`http://localhost:3004?s=rug&id=${id}`} width='100%' height="100vh" style={{border:'none'}}
+        <iframe src={`${PAYMENT_PROCESSOR_URL}?s=rug&id=${id}`} width='100%' height="100vh" style={{border:'none'}}
                 onLoad={() => setIframeLoading(false)} 
         >
         </iframe>

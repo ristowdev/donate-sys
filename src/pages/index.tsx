@@ -19,9 +19,13 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <> 
+
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <SEOpro title={'RiseUpGram: Your home for help'}/>
        
-       <HeaderNew />
+      <HeaderNew />
 
       <div className='container'> 
         <div className='wrapper'> 
