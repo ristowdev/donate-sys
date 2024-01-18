@@ -2426,6 +2426,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .tcm-fts-s{
   width:110%;
+  /* width: 110vw; */
   height:130px;
   background:#033629;
   display:flex;
@@ -2434,7 +2435,10 @@ input[type="number"]::-webkit-outer-spin-button {
   transform:rotate(2deg);
   margin-left:-5%;
   z-index:9;
-  white-space:nowrap;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add this line */
 }
  
 
@@ -2616,6 +2620,11 @@ input[type="number"]::-webkit-outer-spin-button {
   flex-direction:column;
   border-top:1px solid #d4d4d4;
   padding-top:20px;
+  padding-bottom:20px;
+}
+
+.aro-varorov-vd.rotate{
+  transform:rotate(180deg);
 }
 
 .qpps-question{
@@ -3405,6 +3414,9 @@ input[type="number"]::-webkit-outer-spin-button {
   .fundraiser-single-l-r, .dvpd-pclc-tm-single{
     width:100%;
   }
+  .dvpd-pclc-tm-single{
+    margin-left:0px;
+  }
 }
 
 
@@ -3912,7 +3924,7 @@ input[type="number"]::-webkit-outer-spin-button {
     font-size:18px;
   }
   .ansewrsors p{
-    font-size:14.5px;
+    font-size:16px;
     line-height:1.4;
   }
   .asp-pcqi{
@@ -5857,4 +5869,28 @@ margin-bottom:50px;
 
   top:0;
   left:0;
+}
+
+.lspa-lp-sllpd-loading-small svg{
+  width:150px;
+  height:150px;
+
+}
+
+.lspa-lp-sllpd-loading-small{
+  margin-top:50px;
+  height:300px;
+}
+
+@media(max-width:700px){
+  .lspa-lp-sllpd-loading-small svg{
+    width:100px;
+    height:100px;
+  
+  }
+
+  .lspa-lp-sllpd-loading-small{
+    mar-top:20px;
+    /* height:150px; */
+  }
 }

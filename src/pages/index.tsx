@@ -12,11 +12,20 @@ import Footer from '@/components/footer'
 import HeaderNew from '@/components/header-new'
 import Link from 'next/link'
 import SEOpro from '@/components/SEO-pro'
+import { faqs } from '../../faqs'
+import { useState } from 'react'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
   return (
     <> 
 
@@ -652,41 +661,41 @@ export default function Home() {
               <div className='team-members-dll'>
                   <div className='dvpd-pclc-tm-single'>
                       <div className='clvppd'>
-                        <img src="/buziks.png" />
+                        <img src="/habert-ceo.webp" />
                       </div>
                       <div className='whosxldscl'>
                           <h2>Anotiono Roberto</h2>
-                          <span>Founder Pracima</span>
+                          <span>CEO & Founder</span>
                       </div>
                   </div>
 
                   <div className='dvpd-pclc-tm-single vfvdfvd'>
                       <div className='clvppd'>
-                        <img src="/buziks.png" />
+                        <img src="/stt.webp" />
                       </div>
                       <div className='whosxldscl'>
-                          <h2>Anotiono Roberto</h2>
-                          <span>Founder Pracima</span>
+                          <h2>Amanda Rodriguez</h2>
+                          <span>Chief Marketing Officer</span>
                       </div>
                   </div>
 
                   <div className='dvpd-pclc-tm-single cdnnnvsmd'>
                       <div className='clvppd'>
-                        <img src="/buziks.png" />
+                        <img src="/bbb.webp" />
                       </div>
                       <div className='whosxldscl'>
-                          <h2>Anotiono Roberto</h2>
-                          <span>Founder Pracima</span>
+                          <h2>Deborah Reynolds</h2>
+                          <span>Chief Financial Officer</span>
                       </div>
                   </div>
 
                   <div className='dvpd-pclc-tm-single budd'>
                       <div className='clvppd'>
-                        <img src="/buziks.png" />
+                        <img src="/lead.webp" />
                       </div>
                       <div className='whosxldscl'>
-                          <h2>Anotiono Roberto</h2>
-                          <span>Founder Pracima</span>
+                          <h2>Melissa Taylor</h2>
+                          <span>Customer Support Manager</span>
                       </div>
                   </div>
               </div>
@@ -703,103 +712,27 @@ export default function Home() {
                   </div>
                   <div className='top-vlgpb-bf'>
                       <h1>Frequently asked questions</h1>
-                      <p>Have another question? Email us at <u>help@donate.com</u></p>
+                      <p>Have another question? Email us at <u>contact@riseupgram.com</u></p>
                   </div>
 
                   <div className='question-list'>
-                        <div className='question-single-pv'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div>
-                        </div>
-
-                        <div className='question-single-pv vipdo'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            {/* <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div> */}
-                        </div>
-                        <div className='question-single-pv vipdo'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            {/* <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div> */}
-                        </div>
-                        <div className='question-single-pv vipdo'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            {/* <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div> */}
-                        </div>
-
-                        <div className='question-single-pv vipdo'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div>
-                        </div>
-
-                        <div className='question-single-pv vipdo advalox'>
-                            <div className='qpps-question'>
-
-                              <div className='asp-pcqi'>
-                                <span>What types of charities can I donate to, and how do I find them?</span>
-                              </div>
-                              <div className='aro-varorov-vd'>
-                                <IoArrowDownCircleOutline size={30}/>
-                              </div>
-                            </div>
-
-                            {/* <div className='ansewrsors'>
-                              <p>There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare. There are many types of charities out there, ranging from local organizations to large international ones. You can donate to charities that focus on a particular cause, such as animal welfare.</p>
-                            </div> */}
-                        </div>
+                  {faqs.map((faq, index) => (
+                  <div key={index} className={`question-single-pv ${openIndex === index ? 'open' : ''}`}>
+                    <div className='qpps-question' onClick={() => toggleFAQ(index)}>
+                      <div className='asp-pcqi'>
+                        <span>{faq.question}</span>
+                      </div>
+                      <div className={`aro-varorov-vd ${openIndex === index ? 'rotate' : ''}`}>
+                        <IoArrowDownCircleOutline size={30} />
+                      </div>
+                    </div>
+                    {openIndex === index && (
+                      <div className='ansewrsors'>
+                        <p>{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                ))}
                   </div>
             </div>
         </div>
