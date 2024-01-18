@@ -252,6 +252,7 @@ a {
   margin-bottom:50px;
   margin-top:10px;
   font-size:16px;
+  line-height:1.7;
 }
 
 .timc-ecl{
@@ -770,9 +771,11 @@ a {
 .vp-1pallp{
   display:flex;
 }
-
-.fpp2-1pdew{
+.dlpas--ldap{
   width:25%;
+}
+.fpp2-1pdew{
+  width:100%;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -837,7 +840,9 @@ a {
   font-size:16px;
   color:#333;
   margin-top:4px;
+  overflow:scroll;
 }
+
 
 .bnt-slda{
   width:30%;
@@ -848,6 +853,7 @@ a {
   display:flex;
   align-items:center;
   justify-content:center;
+  margin-bottom:100px;
 }
 
 .donate-welfw{
@@ -1108,7 +1114,7 @@ a {
 
 .vlxpaxaq1-v-za span{
   color:#767676;
-  font-size:17px;
+  font-size:16px;
 }
 
 .vlzla12sffgvc{
@@ -4013,6 +4019,19 @@ input[type="number"]::-webkit-outer-spin-button {
   width: 100%;
 }
 
+.dlasplad{
+  width:100%;
+  margin-left:30px;
+  margin-right:30px;
+  padding-bottom:50px;
+}
+
+.dlasplad button{
+  width:130px !important;
+  /* margin-bottom:50px; */
+
+}
+
 
 .zlpas{
   margin-top:6px;
@@ -4036,6 +4055,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .xppa-ppxpa{
   position:fixed;
   bottom:0px;
+  left:0;
   width:100%;
   height:80px;
   background:white;
@@ -4069,6 +4089,21 @@ input[type="number"]::-webkit-outer-spin-button {
  
 
 @media(max-width:855px){
+  .vlpsdps{
+    margin-top:0px !important;
+  }
+
+  .dlasplad{
+    width:100%;
+    margin-left:20px;
+    margin-right:20px;
+  }
+
+  .dlasplad button{
+    width:130px !important;
+    margin-bottom:50px;
+
+  }
   .vlppsdds{
     display:none;
   }
@@ -4282,7 +4317,7 @@ input[type="number"]::-webkit-outer-spin-button {
   .mdc-spda h1{
     font-size:20px;
   }
-  .fpp2-1pdew{
+  .fpp2-1pdew, .dlpas--ldap{
     flex-direction:row;
     align-items:center;
     justify-content:flex-start;
@@ -5467,4 +5502,311 @@ margin-top:20px;
 .fslpsalppp{
   width:100%;
   margin-left:0px;
+}
+
+@media(max-width: 666px){
+  .lpdl-loading svg{
+    width:100px;
+    height:100px;
+  }
+}
+
+
+.vlpdpx-palda{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.dlpsald{
+  width:100%;
+  height:80px;
+  background:white;
+  display:flex;
+  align-items:center;
+}
+
+
+.dlaps-x-asaa{
+  display:flex;
+}
+
+
+.dps-x-pa-ps{
+  display:flex;
+  align-items:center;
+}
+.dps-x-pa-ps span{
+  font-size:14px;
+  margin-left:5px;
+}
+
+
+.clalpsdl img{
+  width:170px;
+}
+
+
+.clalpsdl1 a{
+  font-size:14px;
+  text-decoration:underline;
+}
+
+
+/* @media(max-width:863px){
+
+  .clalpsdl img{
+    width:150px;
+  }
+} */
+
+.pspppas .vlxpaxaq1-v-za{
+  margin-bottom:15px;
+}
+
+.pspppas .vlxpaxaq1-v-za span{
+  color:black;
+}
+
+@media(max-width:863px){
+  
+  body{
+    background:white !important;
+  }
+
+  .donate-welfw{
+    margin-top:30px;
+    padding:0;
+  }
+
+  .vp-apsa{
+    display:none;
+  }
+  .dlpsald{
+    height:56px;
+  }
+  .pdpqp111sla--da-ssxz{
+    margin-top:0px;
+  }
+  .dpq-dqwlsls{
+    margin-bottom:20px;
+  }
+
+  .p1pdwelqll{
+    margin-top:10px;
+    margin-left:0px;
+  }
+  .llqld-11d{
+    display:none;
+  }
+  .spclap-111ds{
+    margin-left:0px;
+  }
+
+  .clalpsdl img{
+    width:150px;
+  }
+
+  .lcpas-pasl{
+    margin-bottom:30px;
+  }
+}
+
+
+.success-animation { 
+   
+margin-bottom:50px;
+  
+}
+
+.lcp-pasldp{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:50px;
+  margin-bottom:50px;
+}
+.lcp-pasldp h1{
+  font-size:31px;
+  color:#333;
+  margin-bottom:20px;
+}
+
+.lcp-pasldp p{
+  font-size:16px;
+  text-align:center;
+  color:#767676;
+}
+
+.lpdsa-plasplcsa img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+  border-radius:15px;
+}
+
+.lpa-clpas h1{
+  font-size:20px;
+  font-weight:400;
+}
+.lpa-clpas{
+  margin-bottom:30px;
+  margin-top:100px;
+}
+
+.lcpas-pasl{
+  margin-top:20px;
+}
+
+.lpda-lpdas p{
+  font-size:16px;
+  /* text-align:center; */
+  color:#333;
+}
+.lpda-lpdas{
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+.ldlasp-plxla{
+  margin-top:20px;
+}
+
+.ldlasp-plxla textarea{
+
+  height:150px;
+  width:100%;
+  border:none;
+  outline:none;
+  color:#333;
+  font-family: 'Roboto', sans-serif;
+  font-size:16px;
+  padding-left:15px;
+  padding-right:15px;
+  border-radius:10px;
+  border:1px solid #c8c8c8;
+  background:white;  
+  resize:none;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.ldlasp-plxla button{
+  width:140px;
+  height:50px;
+  border-radius:10px;
+  outline:none;
+  border:none;
+  font-family: 'Roboto', sans-serif;
+  font-size:16px;
+  margin-top:20px;
+  background:#008748;
+  cursor:pointer;
+}
+
+.pfpdsp{
+  margin-top:50px;
+}
+
+.lcpas-pasl a{
+  color:black;
+  font-size:15px;
+  text-decoration:underline;
+}
+
+
+.spinner svg{
+  width:50px;
+  height:50px;
+}
+
+.checkmark {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb71b;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #4bb71b;
+    fill: #fff;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
+
+
+
+@media(max-width: 666px){
+  .donate-welfw{
+    padding-left:5%;
+    padding-right:5%;
+  }
+
+  .lpdl-loading svg{
+    width:100px;
+    height:100px;
+  }
+  .checkmark{
+    width:100px;
+    height:100px;
+  }
+}
+
+.lpsdal-pxla span{
+  font-size:16px;
+  color:green;
+}
+
+.lpsdal-pxla{
+  background: #03874836;
+    color: green;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:20px;
 }

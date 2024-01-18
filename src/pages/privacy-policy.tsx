@@ -74,7 +74,7 @@ export default function PrivacyPolicy() {
 
             <h2>7. Contact Us</h2>
 
-            <p>If you have any questions or concerns about this Privacy Policy, please contact us at [your contact email].</p>
+            <p>If you have any questions or concerns about this Privacy Policy, please contact us at contact@riseupgram.com.</p>
 
 
             </div>

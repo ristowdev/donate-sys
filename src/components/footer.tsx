@@ -42,19 +42,6 @@ export default function Footer(props: IFooterProps) {
 
                                 <div className='linksv-dls'>
 
-                                    <div className='vldps--cdsp'>
-                                        <div className='vldvpsds'>
-                                            <Link href="/about-us"><span>About us</span></Link>
-                                        </div>
-
-                                        <div className='vldvpsds'>
-                                            <Link href="/contact"><span>Contact</span></Link>
-                                        </div>
-
-                                        <div className='vldvpsds'>
-                                            <Link href="/how-it-works"><span>How it Works</span></Link>
-                                        </div>
-                                    </div>
 
                                     <div className='vldps--cdsp'>
                                         <div className='vldvpsds'>
@@ -86,18 +73,36 @@ export default function Footer(props: IFooterProps) {
                                         </div>
                                     </div>
 
+                                    <div className='vldps--cdsp'>
 
-                                    <div className='vldps--cdsp' style={{marginRight:0}}>
                                         <div className='vldvpsds'>
-                                            <Link href="/privacy-policy"><span>Privacy Policy</span></Link>
+                                            <Link href="/how-it-works"><span>How it Works</span></Link>
+                                        </div>
+
+                                        <div className='vldvpsds'>
+                                            <Link href="/contact"><span>Contact</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
                                             <Link href="/cookie-policy"><span>Cookie Policy</span></Link>
                                         </div>
+                                    </div>
+
+
+
+                                    <div className='vldps--cdsp' style={{marginRight:0}}>
 
                                         <div className='vldvpsds'>
-                                            <Link href="/refund-policy"><span>Refund Policy</span></Link>
+                                            <Link href="/terms"><span>Terms</span></Link>
+                                        </div>
+                                        
+                                        <div className='vldvpsds'>
+                                            <Link href="/privacy-policy"><span>Privacy Policy</span></Link>
+                                        </div>
+
+
+                                        <div className='vldvpsds'>
+                                            <Link href="/riseupgram-guarantee"><span>Refund Policy</span></Link>
                                         </div>
                                     </div>
 

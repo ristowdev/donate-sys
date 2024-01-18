@@ -209,12 +209,12 @@ export default function Home() {
 
 
             <div className='text-main desktop'>
-                <h1>Fundraising on Parcima takes<br/>just a few minutes</h1>
+                <h1>Fundraising on RiseUpGram takes<br/>just a few minutes</h1>
             </div>
 
 
             <div className='text-main mobile'>
-                <h1>Fundraising on Parcima takes just a few minutes</h1>
+                <h1>Fundraising on RiseUpGram takes just a few minutes</h1>
             </div>
 
             <div className='three-boces'>

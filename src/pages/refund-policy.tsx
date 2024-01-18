@@ -10,11 +10,19 @@ import { FaHeart } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
 import HeaderNew from '@/components/header-new'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function PrivacyPolicy() {
+
+  const router = useRouter();
+  useEffect(()=>{
+      router.push('/riseupgram-guarantee')
+  },[]);  
+  return;
   return (
     <>
       <Head>

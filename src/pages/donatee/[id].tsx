@@ -11,7 +11,7 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 import Footer from '@/components/footer'
 import { useEffect, useState } from 'react'
 import { CiWarning } from "react-icons/ci";
-import { FaCheck } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa"; 
 import Link from 'next/link'
 
 

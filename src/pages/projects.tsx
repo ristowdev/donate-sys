@@ -13,6 +13,8 @@ import Link from 'next/link'
 import HeaderNew from '@/components/header-new'
 import { FiDelete, FiSearch } from 'react-icons/fi'
 import { useEffect, useRef, useState } from 'react'
+import { useGetFundraisersQuery } from '@/slices/fundraisers/fundraisersApiSlices'
+import { FILES_URL } from '../../config'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,11 +25,33 @@ export default function Projects() {
   const [nearYouOrTrending, setNYorTr] = useState<string>('trending')
   const inputRef = useRef<HTMLInputElement>(null);
 
+  const { data: all_fundraisers, refetch: nbr, isError:nibe, isLoading: nbl, isSuccess:nbs, error:nbe } = useGetFundraisersQuery([]);
+
+
   useEffect(()=>{
     if(inputRef){
       inputRef.current?.focus();
     }
   },[]);
+
+  const calculateProgressOfFundraiser = (raised: number, goal: number) => {
+    const percentage = (raised / goal) * 100;
+
+    // Ensure the percentage is capped at 100%
+    return Math.min(percentage, 100);
+  }
+
+  function formatDonationAmount(inputValue: number) {
+  
+    const formattedAmount = new Intl.NumberFormat("en-US", {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(inputValue);
+  
+    return formattedAmount;
+  }
 
   return (
     <>
@@ -75,26 +99,27 @@ export default function Projects() {
 
 
               <div className='lcpsplcpl'>
-              {Array.from({ length: 30 }, (_, index) => (
+              {/* {Array.from({ length: 30 }, (_, index) => ( */}
+              {all_fundraisers?.map((fundraiser: any, index: number)=>(
 
-                  <div className='dlapslpcsa'>
-                    <Link href="/project/dlaslp">
+                  <div className='dlapslpcsa' key={index}>
+                    <Link href={`/project/${fundraiser._id}`}>
                       <div className='lzppals'> 
                         
                         <div className='z-cp-cpl-llllps'>
-                            <img src="happyf.png" />
+                            <img src={FILES_URL+'/'+fundraiser.thumbnail} />
                         </div>
                         <div className='lelpwleplfw--wepfep'>
-                          <h1>Support the Ambrosio Kids: In Memory of Jen & Ryan</h1>
-                          <span>by Eric Woody</span>
+                          <h1>{fundraiser.title}</h1>
+                          <span>by {fundraiser.organizer}</span>
                           
                           <div className='lslv-ra-goal fd3as kfkldsk'>
                             <div className='lsvl-goal-progess-bar' style={{background:'#e6f5ef'}}>
-                              <div className='lvl-pb-progress' style={{background:'#02a95c'}}></div>
+                              <div className='lvl-pb-progress' style={{background:'#02a95c', width:calculateProgressOfFundraiser(fundraiser.raised, Number(fundraiser.goal))+'%'}}></div>
                             </div>
                           </div>
                           <div className='lvldvfdps-raised flllall lldlppalsl'>
-                            <span>$90,294</span>
+                            <span>{formatDonationAmount(fundraiser.raised)}</span>
                             <label>raised</label>
                           </div>
                         </div>

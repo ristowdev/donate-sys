@@ -14,12 +14,16 @@ import { CiWarning } from "react-icons/ci";
 import { FaCheck } from "react-icons/fa";
 import Link from 'next/link'
 import Loading from '@/components/loading'
+import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Donate() {
   const [iframeLoading, setIframeLoading] = useState<boolean>(true);
+
+  const router = useRouter();
+  const { id } = router.query;
 
   return (
     <>
@@ -42,7 +46,7 @@ export default function Donate() {
       <div className='cpspplxa'>
         {/* {iframeLoading && <Loading />} */}
 
-        <iframe src="http://localhost:3004?s=rug" width='100%' height="100vh" style={{border:'none'}}
+        <iframe src={`http://localhost:3004?s=rug&id=${id}`} width='100%' height="100vh" style={{border:'none'}}
                 onLoad={() => setIframeLoading(false)} 
         >
         </iframe>
