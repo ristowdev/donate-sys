@@ -535,7 +535,7 @@ export default function Home() {
       </div>
       
 
-      <div className='fourth-section'>  
+      <div className='fourth-section kweokf'>  
 
           <div className='track-main'>
               <div className='tcm-fts-s'>
@@ -548,6 +548,16 @@ export default function Home() {
           </div>
 
       </div>
+
+      <div className='lpsda-pxlpals'>
+        <div className='ldlpas-xplapls-1'>
+            <img src="/hh1.png" />
+        </div>
+        <div className='ldlpas-xplapls-2'>
+            <img src="/hh2.png" />
+        </div>
+      </div>
+      {/* ghel1.png */}
 
       {/* <div className='fourth-section'>
           <div className='track-main'>

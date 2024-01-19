@@ -5923,3 +5923,37 @@ margin-bottom:50px;
     /* height:150px; */
   }
 }
+
+.lpsda-pxlpals{
+  display:none;
+}
+
+@media(max-width:400px){
+  .kweokf{
+    display:none;
+  }
+  .lpsda-pxlpals{
+    display:flex;
+    flex-direction:column;
+    height:100px;
+    align-items:center;
+    justify-content:center;
+    margin-top:110px;
+  }
+  .ldlpas-xplapls-1 img{
+    width:100%;
+    height:60px;
+    object-fit:cover;
+  }
+
+  .ldlpas-xplapls-2 img{
+    width:100%;
+    height:60px;
+    object-fit:cover;
+    margin-top:-10px;
+  }
+
+  .ldlpas-xplapls-2{
+    /* transform:rotate(-2deg); */
+  }
+}
