@@ -21,7 +21,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const [underConstruction, setUnderConstruction] = useState<boolean>(true);
+  const [underConstruction, setUnderConstruction] = useState<boolean>(false);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
