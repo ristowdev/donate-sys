@@ -6,8 +6,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { BASE_URL, FILES_URL } from "../../../config";
+import SEOpro from "@/components/SEO-pro";
 
-export default function Home() {
+export default function ThankYou() {
 
     const router = useRouter();
     const { id } = router.query;
@@ -112,6 +113,8 @@ export default function Home() {
           `}
         </style>
       </Head>
+
+      <SEOpro title="RiseUpGram: Successfully donated"/>
              {isLoading ? <Loading /> : donation_details && <>
 
 
@@ -131,7 +134,7 @@ export default function Home() {
                             </div>
 
                             <h1>Successfully donated</h1>
-                            <p>Your donation was accepted thank you for your help down below are details for your donation.</p>
+                            <p>Thank you for your thoughtful donation! Below, you'll find the details of your contribution. Your support means a lot to us!</p>
 
 
                         </div>
@@ -161,10 +164,10 @@ export default function Home() {
                         </> : (<>                        
                         
                         <div className="lpda-lpdas">
-                            <p>If you want you can write message to give hope to this fundriaser:</p>
+                            <p style={{lineHeight:'1.5'}}>If you wish, you can compose a message to inspire hope for this fundraiser:</p>
                             <div className="ldlasp-plxla">
                                 <textarea 
-                                    placeholder="Write your supporting message.."
+                                    placeholder="Write your message of support..."
                                     onChange={(e)=>{setMessage(e.target.value)}}
                                     value={message}
                                     style={{
@@ -231,7 +234,7 @@ export default function Home() {
                         </div> */}
 
                         <div className="lcpas-pasl">
-                            <Link href={`/project/${donation_details.fundraiser_id}`} style={{textDecoration:'underline', color:'green'}}>Click to open fundraiser</Link>
+                            <Link href={`/fundraiser/${donation_details.fundraiser_id}`} style={{textDecoration:'underline', color:'green'}}>Click to open the fundraiser.</Link>
                         </div>
 
 
@@ -541,7 +544,7 @@ export default function Home() {
 
                     <div className='vlxpaxaq1-v-za'>
                         <span>
-                            <Link href={`/project/${donation_details.fundraiserDetails._id}`} style={{textDecoration:'underline', color:'green'}}>
+                            <Link href={`/fundraiser/${donation_details.fundraiserDetails._id}`} style={{textDecoration:'underline', color:'green'}}>
                                 {donation_details.fundraiserDetails.title.slice(0, 20)+'...'}
                             </Link>
                         </span>

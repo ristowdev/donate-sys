@@ -60,7 +60,7 @@ export default function HeaderMobile(props: IHeaderProps) {
                     <div className='ppxpaplxla'>
                         <div className='zlpaspd'>
 
-                            <Link href="/projects">
+                            <Link href="/fundraisers">
                                 <div className='dalsppsapp'>
                                     <FiSearch  size={25} color='#333333'/>
                                 </div>
@@ -98,7 +98,7 @@ export default function HeaderMobile(props: IHeaderProps) {
                         <div className='ppxpaplxla'>
                             <div className='zlpaspd'>
 
-                                <Link href="/projects">
+                                <Link href="/fundraisers">
                                     <div className='dalsppsapp'>
                                         <FiSearch  size={25} color='#333333'/>
                                     </div>
@@ -156,8 +156,8 @@ export default function HeaderMobile(props: IHeaderProps) {
                                 </div> */}
 
                                 <div className='single-link'>
-                                    <Link href="/projects">
-                                        <span>Projects</span>
+                                    <Link href="/fundraisers">
+                                        <span>Fundraisers</span>
                                     </Link>
                                 </div>
 

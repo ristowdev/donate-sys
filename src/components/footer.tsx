@@ -53,7 +53,7 @@ export default function Footer(props: IFooterProps) {
                                         </div>
 
                                         <div className='vldvpsds'>
-                                            <Link href="/projects"><span>Fundraisers</span></Link>
+                                            <Link href="/fundraisers"><span>Fundraisers</span></Link>
                                         </div>
                                     </div>
 
@@ -121,7 +121,7 @@ export default function Footer(props: IFooterProps) {
 
                                 <div className='vlvfpddfvp'> 
                                 <div className='rp-ba-d-n-btn sdccdlcdppp'>
-                                    <Link href="/projects">
+                                    <Link href="/fundraisers">
                                     <button><span>Donate now</span>
                                         <div className='rpbdn-btn'>
                                         <IoMdArrowDown color="black" size={23} className='sdpap-ss--acv'/>

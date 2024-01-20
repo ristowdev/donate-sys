@@ -23,14 +23,19 @@ import { useGetFundraiserQuery } from '@/slices/fundraisers/fundraisersApiSlices
 import Loading from '@/components/loading'
 import ButtonsSticky from '@/components/buttons-sticky'
 import parse, { domToReact } from 'html-react-parser';
-import { FILES_URL, SITE_URL } from '../../../config'
+import { BASE_URL, FILES_URL, SITE_URL } from '../../../config'
 import { NextSeo } from 'next-seo'
 import { GetServerSideProps } from 'next'
 import SEOpro from '@/components/SEO-pro'
 
 const inter = Inter({ subsets: ['latin'] })
+// interface HomeProps {
+//   fundraiserDetailsPro: any;
+// }
 
-export default function Home() {
+// const Home: React.FC<HomeProps> = ({ fundraiserDetailsPro }) => {
+
+export default function Fundraiser() {
 
   const [shareModelOpened, setShareModelOpened] = useState<Boolean>(false);
   const [allDonationsModelOpened, setAllDonationsModelOpened] = useState<Boolean>(false);
@@ -126,12 +131,13 @@ export default function Home() {
 
 
   function formatNumber(number: number): string {
-    if (number >= 10000) {
-        const formattedNumber = (number / 1000).toFixed(1);
-        return `${formattedNumber}K`;
-    }
-    return number.toString();
-}
+      if (number >= 10000) {
+          const formattedNumber = (number / 1000).toFixed(1);
+          return `${formattedNumber}K`;
+      }
+      return number.toString();
+  }
+
 
 
   return (
@@ -152,7 +158,7 @@ export default function Home() {
         description={fundraiserDetails.short_desc}
         canonical={SITE_URL}
         openGraph={{
-          url: `${SITE_URL+'/project/'+id}`,
+          url: `${SITE_URL+'/fundraiser/'+id}`,
           title: `${fundraiserDetails.title}`,
           description: `${fundraiserDetails.short_desc}`,
           images: [
@@ -488,7 +494,7 @@ export default function Home() {
         </div>
       </div>
     
-      {shareModelOpened &&  <ShareModal setShareModelOpened={setShareModelOpened} shareUrl={`/project/${id}`}/>}
+      {shareModelOpened &&  <ShareModal setShareModelOpened={setShareModelOpened} shareUrl={`/fundraiser/${id}`}/>}
 
       {allDonationsModelOpened && <AllDonationsModal setAllDonationsModelOpened={setAllDonationsModelOpened} fundraiserDetails={fundraiserDetails}/> }
       
@@ -507,10 +513,27 @@ export default function Home() {
 //   const id = params?.id;
 //   // Fetch data for the specific ID from the database
 //   // const fundraiserDetails = /* logic to fetch data based on id */;
+//   // const { data: fundraiserDetailsPro, isError, isLoading, isSuccess, error } = useGetFundraiserQuery(id);
+//   const [ss, sdA] = useState<string>(['da']);
+//   useEffect(()=>{
+//     var xhr = new XMLHttpRequest();
+//   xhr.withCredentials = false;
 
+//   xhr.addEventListener("readystatechange", function() {
+//     if(this.readyState === 4) {
+//       sdA(this.responseText);
+//     }
+//   });
+
+//   xhr.open("GET", `${BASE_URL}/global/fundraisers/${id}`);
+
+//   xhr.send();
+//   },[]);
 //   return {
 //     props: {
-//       fundraiserDetails,
+//       ss,
 //     },
 //   };
 // };
+
+// export default Home;

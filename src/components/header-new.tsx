@@ -70,7 +70,7 @@ export default function HeaderNew(props: IHeaderProps) {
                     <div className='new-header-inside'>
 
                         <div className='left-links'>
-                            <Link href="/projects">
+                            <Link href="/fundraisers">
                                 <div className='dspaplx fldslpaa'>
                                     <FiSearch  size={20} color='#333333'/>
                                     <span>Search</span>
@@ -152,7 +152,7 @@ export default function HeaderNew(props: IHeaderProps) {
                     <div className='new-header-inside'>
 
                         <div className='left-links'>
-                            <Link href="/projects">
+                            <Link href="/fundraisers">
                                 <div className='dspaplx fldslpaa'>
                                     <FiSearch  size={20} color='#333333'/>
                                     <span>Search</span>

@@ -65,8 +65,8 @@ export default function Header(props: IHeaderProps) {
                             </div> */}
 
                             <div className='single-link'>
-                                <Link href="/projects">
-                                    <span>Projects</span>
+                                <Link href="/fundraisers">
+                                    <span>Fundraisers</span>
                                 </Link>
                             </div>
 
@@ -125,8 +125,8 @@ export default function Header(props: IHeaderProps) {
                                 </div> */}
 
                                 <div className='single-link'>
-                                    <Link href="/projects">
-                                        <span>Projects</span>
+                                    <Link href="/fundraisers">
+                                        <span>Fundraisers</span>
                                     </Link>
                                 </div>
 

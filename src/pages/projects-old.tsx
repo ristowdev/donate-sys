@@ -39,7 +39,7 @@ export default function Projects() {
             <div className='list-fundraisers-row vkkvlfdvldfflvlf'>
 
 
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
+                <Link href="/fundraiser/ovfovld" className='vlvfdlppspps'>
                   <div className='fundraiser-single-l-r'>
                     <div className='fslr-p'>
                         <div className='fslr-p-img'>
@@ -79,7 +79,7 @@ export default function Projects() {
                   </div>
                 </Link>
 
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
+                <Link href="/fundraiser/ovfovld" className='vlvfdlppspps'>
                   <div className='fundraiser-single-l-r'>
                     <div className='fslr-p'>
                         <div className='fslr-p-img'>
@@ -119,7 +119,7 @@ export default function Projects() {
                   </div>
                 </Link>
 
-                <Link href="/project/ovfovld" className='vlvfdlppspps'>
+                <Link href="/fundraiser/ovfovld" className='vlvfdlppspps'>
                   <div className='fundraiser-single-l-r'>
                     <div className='fslr-p'>
                         <div className='fslr-p-img'>
