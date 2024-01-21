@@ -14,6 +14,8 @@ import Link from 'next/link'
 import SEOpro from '@/components/SEO-pro'
 import { faqs } from '../../faqs'
 import { useState } from 'react'
+import { useEffect } from 'react'
+import Cookies from 'js-cookie'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,6 +28,22 @@ export default function Home() {
   const toggleFAQ = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
+
+  useEffect(() => {
+    // Retrieve the value from cookies when the component mounts
+    const storedValue = Cookies.get('_ax90');
+
+    if (storedValue) {
+      // Parse the stored value from string to boolean
+      const parsedValue = JSON.parse(storedValue);
+      if(parsedValue === 'GP.AXPL.A90LL'){
+        setUnderConstruction(true);  
+      }
+      // console.log(parsedValue)
+      // setIsChecked(parsedValue);
+    }
+  }, []); 
 
   return (
     <> 

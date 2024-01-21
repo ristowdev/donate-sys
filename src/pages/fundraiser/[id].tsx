@@ -27,6 +27,7 @@ import { BASE_URL, FILES_URL, SITE_URL } from '../../../config'
 import { NextSeo } from 'next-seo'
 import { GetServerSideProps } from 'next'
 import SEOpro from '@/components/SEO-pro'
+import Cookies from 'js-cookie';
 
 const inter = Inter({ subsets: ['latin'] })
 // interface HomeProps {
@@ -137,6 +138,23 @@ export default function Fundraiser() {
       }
       return number.toString();
   }
+
+
+
+  useEffect(() => {
+    // Retrieve the value from local storage when the component mounts
+    // const storedValue = localStorage.getItem('ax90012');
+    const storedValue = Cookies.get('checked');
+
+
+    if (!storedValue) { 
+      // If no value is found in local storage, set a default value and store it
+      // const defaultValue = true;
+      // localStorage.setItem('ax90012', JSON.stringify('spalsxaz'));
+      Cookies.set('_ax90', JSON.stringify('GP.AXPL.A90LL'));
+
+    }
+  }, []);
 
 
 
