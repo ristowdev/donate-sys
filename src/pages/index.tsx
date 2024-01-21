@@ -16,6 +16,7 @@ import { faqs } from '../../faqs'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import Cookies from 'js-cookie'
+import FIndex from '@/components/fIndex'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -47,10 +48,12 @@ export default function Home() {
 
   return (
     <> 
-      {underConstruction && 
+      {underConstruction ?
       <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+
+      
       </Head>
       <SEOpro title={'RiseUpGram: Your home for help'}/>
        
@@ -772,8 +775,27 @@ export default function Home() {
       <Footer className='home-footer'/>
                    
                    
-                   </>
-                   }
+      </> : <>
+          
+          <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <link rel="icon" href="/favicon.ico" />
+          <style>
+            {`
+              body {
+                background-color: black !important;
+                /* Add more styles as needed */
+              }
+ 
+            `}
+          </style>
+          </Head>
+          <SEOpro title={'RiseUpGram: Your home for help'}/>
+
+          <FIndex />
+      
+      </>
+    }
  
       
     </>

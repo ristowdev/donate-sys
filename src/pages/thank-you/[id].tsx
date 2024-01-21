@@ -110,6 +110,13 @@ export default function ThankYou() {
               /* Add more styles as needed */
             }
 
+            @media(max-width:863px){
+  
+                body{
+                  background:white !important;
+                }
+            }
+
           `}
         </style>
       </Head>

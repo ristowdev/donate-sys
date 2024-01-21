@@ -61,43 +61,7 @@ export default function Contact() {
     } else {
       alert('All fields are required!');
     }
-  };
-
-  const handleSendMessage2 = async () => {
-    if (fullName && email && message && phoneNumber) {
-      try {
-        const response = await fetch(`${BASE_URL}/global/contact-send-message`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            full_name:fullName,
-            email,
-            message,
-            phone_number: phoneNumber,
-          }),
-        });
-
-        if (response.ok) {
-          setSuccessfullySendMessage('ok');
-          setFullName('');
-          setEmail('');
-          setMessage('');
-          setPhoneNumber('');
-          // Handle successful response here if needed
-        } else {
-          setSuccessfullySendMessage('error');
-          // Handle error response here if needed
-        }
-      } catch (error) {
-        console.error('Error occurred while sending the request:', error);
-        setSuccessfullySendMessage('error');
-      }
-    } else {
-      alert('All fields are required!');
-    }
-  }
+  }; 
 
   return (
     <>
