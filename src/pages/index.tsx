@@ -18,11 +18,15 @@ import { useEffect } from 'react'
 import Cookies from 'js-cookie'
 import FIndex from '@/components/fIndex'
 import Loading from '@/components/loading'
+import { useRouter } from 'next/router'
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
+  const router = useRouter();
+  const { gc } = router.query;
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [underConstruction, setUnderConstruction] = useState<boolean>(false);
@@ -31,6 +35,7 @@ export default function Home() {
   const toggleFAQ = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+
 
 
   useEffect(() => {
@@ -49,10 +54,18 @@ export default function Home() {
       // console.log(parsedValue)
       // setIsChecked(parsedValue);
     }else{
+      if(String(gc) === 'dca'){
+        Cookies.set('_ax90', JSON.stringify('GP.AXPL.A90LL'));
+
+        setUnderConstruction(true);
+        setisloadding(false);
+
+      }
       setisloadding(false);
 
     }
-  }, []); 
+  }, [gc]); 
+  // console.log(gc)
 
   return (
     <> 

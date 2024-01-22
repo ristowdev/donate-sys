@@ -152,7 +152,7 @@ export default function ThankYou() {
 
                         {(response?.message || donation_details.message) ? <>
                             <div className="lpda-lpdas">
-                            <p style={{fontSize:'16px', color:'black', fontWeight:600}}>Message:</p>
+                            <p style={{fontSize:'16px', color:'black', fontWeight:600}}>Supportive Message:</p>
                             <div className="ldlasp-plxla">
                                 <textarea 
                                     value={response?.message || donation_details.message}
@@ -171,10 +171,10 @@ export default function ThankYou() {
                         </> : (<>                        
                         
                         <div className="lpda-lpdas">
-                            <p style={{lineHeight:'1.5'}}>If you wish, you can compose a message to inspire hope for this fundraiser:</p>
+                            <p style={{lineHeight:'1.5'}}>If you want, you can write a supportive message:</p>
                             <div className="ldlasp-plxla">
                                 <textarea 
-                                    placeholder="Write your message of support..."
+                                    placeholder="Write your message..."
                                     onChange={(e)=>{setMessage(e.target.value)}}
                                     value={message}
                                     style={{
@@ -241,7 +241,7 @@ export default function ThankYou() {
                         </div> */}
 
                         <div className="lcpas-pasl">
-                            <Link href={`/fundraiser/${donation_details.fundraiser_id}`} style={{textDecoration:'underline', color:'green'}}>Click to open the fundraiser.</Link>
+                            <Link href={`/fundraiser/${donation_details.fundraiser_id}`} style={{textDecoration:'underline', color:'green', fontWeight:'bold'}}>View fundraiser.</Link>
                         </div>
 
 
@@ -551,7 +551,7 @@ export default function ThankYou() {
 
                     <div className='vlxpaxaq1-v-za'>
                         <span>
-                            <Link href={`/fundraiser/${donation_details.fundraiserDetails._id}`} style={{textDecoration:'underline', color:'green'}}>
+                            <Link href={`/fundraiser/${donation_details.fundraiserDetails._id}`} style={{textDecoration:'underline', color:'green', fontWeight:'bold'}}>
                                 {donation_details.fundraiserDetails.title.slice(0, 20)+'...'}
                             </Link>
                         </span>
@@ -618,7 +618,7 @@ export default function ThankYou() {
                 </div>
                 <div className='dlcpx--apxpalaqqw'>
                     <span>RiseUpGram protects your donation</span>
-                    <p>We guarantee you a full refund for up to a year in the rare case that fraud occurs. <Link href="/"> See our RiseUpGram Giving Guarantee.</Link></p>
+                    <p>We guarantee you a full refund for up to a year in the rare case that fraud occurs. <Link href="/riseupgram-guarantee"> See our RiseUpGram Giving Guarantee.</Link></p>
                 </div>
             </div>
 
