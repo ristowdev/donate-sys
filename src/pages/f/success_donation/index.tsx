@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import SEOpro from "@/components/SEO-pro";
 import { SITE_URL } from "../../../../config";
+import FPaymentHeader from "@/components/f/header-payment";
 
 export default function ThankYou() {
 
@@ -96,7 +97,7 @@ export default function ThankYou() {
              
 
 
-                {/* <PaymentHeader fundraiserId={donation_details.fundraiser_id}/>  */}
+                <FPaymentHeader /> 
 
 
                 
@@ -119,7 +120,6 @@ export default function ThankYou() {
 
 
 
-                        <div className='cpp1pldw-separator'></div>
 
                         
 
@@ -141,6 +141,8 @@ export default function ThankYou() {
                                 <button className="xlpapxpllaa" onClick={handleDownload}>Download now</button>
                             </div>
                         </div> 
+                        <div className='cpp1pldw-separator'></div>
+
                         {/* <div className="lpa-clpas">
                             <h1>You're supporting: <br/><br/><b>{donation_details.fundraiserDetails.title}</b></h1>
                         </div> */}
