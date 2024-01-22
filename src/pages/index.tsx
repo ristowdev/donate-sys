@@ -43,9 +43,14 @@ export default function Home() {
       if(parsedValue === 'GP.AXPL.A90LL'){
         setUnderConstruction(true);  
         setisloadding(false);
+      }else{
+        setisloadding(false);
       }
       // console.log(parsedValue)
       // setIsChecked(parsedValue);
+    }else{
+      setisloadding(false);
+
     }
   }, []); 
 
