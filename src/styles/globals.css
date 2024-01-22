@@ -4165,6 +4165,10 @@ input[type="number"]::-webkit-outer-spin-button {
   .vlpsdps{
     margin-top:0px !important;
   }
+  .modal{
+
+    backdrop-filter: blur(5px);
+  }
 
   .modal-header{
     position:absolute;

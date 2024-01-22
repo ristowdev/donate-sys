@@ -135,7 +135,7 @@ export default function StartARiseUpGram() {
 
 
               <div className='ls-palpxla'>
-                <button onClick={()=>{alert("Your aplication was sucessfully. Our team will contact you soon!")}}>Apply</button>
+                <button onClick={()=>{alert("Your aplication was sucessfully. Our team will contact you soon!")}} style={{color:'white'}}>Apply</button>
               </div>
             </div>
         </div>

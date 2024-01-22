@@ -148,7 +148,7 @@ export default function Contact() {
                     </div>
 
                     <div className='ldpsa-lcspl'>
-                      <button onClick={()=>{handleSendMessage()}}>Send</button>
+                      <button onClick={()=>{handleSendMessage()}} style={{color:'white'}}>Send</button>
                     </div>
 
 

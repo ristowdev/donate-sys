@@ -122,7 +122,7 @@ export default function AboutUs() {
               </div>
 
               <div className='lpdslvsp'>
-                <Link href="/fundraisers"><button>Donate now</button></Link>
+                <Link href="/fundraisers"><button style={{color:'white'}}>Donate now</button></Link>
               </div>
             </div>
         </div>

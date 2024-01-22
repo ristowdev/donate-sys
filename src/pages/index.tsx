@@ -17,6 +17,7 @@ import { useState } from 'react'
 import { useEffect } from 'react'
 import Cookies from 'js-cookie'
 import FIndex from '@/components/fIndex'
+import Loading from '@/components/loading'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -25,6 +26,7 @@ export default function Home() {
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [underConstruction, setUnderConstruction] = useState<boolean>(false);
+  const [isloadingg, setisloadding] = useState<boolean>(true);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -40,6 +42,7 @@ export default function Home() {
       const parsedValue = JSON.parse(storedValue);
       if(parsedValue === 'GP.AXPL.A90LL'){
         setUnderConstruction(true);  
+        setisloadding(false);
       }
       // console.log(parsedValue)
       // setIsChecked(parsedValue);
@@ -48,7 +51,11 @@ export default function Home() {
 
   return (
     <> 
-      {underConstruction ?
+      {isloadingg ?<>
+      <Loading />
+      </> : 
+      
+      underConstruction ?
       <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
