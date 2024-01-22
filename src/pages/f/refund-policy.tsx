@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
 <h3>3. Refund Timeframe</h3>
 
 <ul>
-	<li>Refunds, if approved, will be processed within [insert number of days] days of the approval date. Please note that the time it takes for the refund to be reflected in your account may vary depending on your payment method.</li>
+	<li>Refunds, if approved, will be processed within 60 days of the approval date. Please note that the time it takes for the refund to be reflected in your account may vary depending on your payment method.</li>
 </ul>
 
 <h3>4. Non-Refundable Items</h3>

@@ -6294,4 +6294,39 @@ margin-bottom:50px;
   }
 }
 
+
+.lxppalx{
+  margin-top:50px;
+  display:flex;
+  width:100%;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  flex-direction:column;
+}
+
+
+.lxppalx span{
+  font-size:15px;
+  /* color:#767676; */
+}
+
+.lxppalx p{
+  margin-top:20px;
+  color:#767676;
+  font-size:14px;
+}
+
  
+.xlpapxpllaa{
+  margin-top:10px;
+  width:120px;
+  height:35px;
+  border-radius:10px;
+  outline:none;
+  border:none;
+  font-family:'Roboto', sans-serif;
+  font-size:14px;
+  background:#008748;
+  cursor:pointer;
+}
