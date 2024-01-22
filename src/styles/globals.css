@@ -4172,6 +4172,14 @@ input[type="number"]::-webkit-outer-spin-button {
     left:0;
     background:white;
   }
+  
+  .mdm--alsls{
+    height:90% !important;
+  }
+
+  .modal-inside{
+    height:90vh !important;
+  }
 
   .modal-content, .mdm--alsls{
     margin-top:80px;
@@ -6340,4 +6348,19 @@ margin-bottom:50px;
   font-size:14px;
   background:#008748;
   cursor:pointer;
+}
+
+
+.lppplalal{
+  margin-top:0px;
+  width:45%;
+  margin-left:50px;
+}
+
+@media(max-width:750px){
+  .lppplalal{
+    width:100%;
+    margin-left:0px;
+    margin-top:50px;
+  }
 }

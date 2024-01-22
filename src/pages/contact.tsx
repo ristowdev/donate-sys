@@ -104,7 +104,7 @@ export default function Contact() {
 
               </div>
               
-              <div className='qq-cal-l-1'>
+              <div className='qq-cal-l-1 lppplalal'>
                 <div className='l-as--s-appxla'>
                   <div className='fwlpflwp'>
 
