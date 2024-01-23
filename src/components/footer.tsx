@@ -61,7 +61,7 @@ export default function Footer(props: IFooterProps) {
 
                                     <div className='vldps--cdsp'>
                                         <div className='vldvpsds'>
-                                            <Link href="https://twitter.com/riseupgram"><span>Twitter</span></Link>
+                                            <Link href="https://twitter.com/riseupgram" target='_blank'><span>Twitter</span></Link>
                                         </div>
 
                                         <div className='vldvpsds'>
