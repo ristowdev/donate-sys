@@ -5,11 +5,13 @@ import { NextSeo } from 'next-seo';
 
 interface ISEOProProps{ 
     title:string;
+    thumbnail? :string;
 }
 
 export default function SEOpro(props: ISEOProProps) {
     const { 
         title,
+        thumbnail
     } = props;
      
 
@@ -24,7 +26,7 @@ export default function SEOpro(props: ISEOProProps) {
                 description: 'Join our crowdfunding community to support and fund meaningful causes. Start or contribute to campaigns that make a difference.',
                 images: [
                     {
-                        url: `${FILES_URL+'/social-share-rug.jpg'}`,
+                        url: `${FILES_URL}/${thumbnail?thumbnail:'social-share-rug.jpg'}`,
                         width: 800,
                         height: 600,
                         alt: '',

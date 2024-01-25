@@ -158,6 +158,11 @@ export default function Fundraiser() {
   }, []);
 
 
+  // const seoTitle = fundraiserDetails?.title || 'RiseUpGram: Donate now';
+  // const seoThumbnail = fundraiserDetails?.thumbnail || 'social-share-rug.jpg';
+
+
+
 
   return (
     <>
@@ -166,7 +171,6 @@ export default function Fundraiser() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SEOpro title='RiseUpGram: Donate now.'/>
 
 
     {/* {id &&  */}
@@ -198,6 +202,11 @@ export default function Fundraiser() {
 
       {isLoading ? <Loading /> : fundraiserDetails && <>
       
+      <SEOpro 
+        title={fundraiserDetails.title}
+        thumbnail={fundraiserDetails.thumbnail}
+      />
+
       {/* <NextSeo
         title={`Fundraiser by ${fundraiserDetails.organizer} : ${fundraiserDetails.title}`}
         description={fundraiserDetails.short_desc}
