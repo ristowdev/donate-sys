@@ -71,7 +71,8 @@ export default function Fundraiser() {
   const [shareModelOpened, setShareModelOpened] = useState<Boolean>(false);
   const [allDonationsModelOpened, setAllDonationsModelOpened] = useState<Boolean>(false);
   const router = useRouter();
-  const { id, a } = router.query;
+  // const { id, a } = router.query;
+  const id = '65b25ac66ac0a9003a45093a';
  
 
   const { data: fundraiserDetails, isError, isLoading, isSuccess, error } = useGetFundraiserQuery(id);
@@ -209,15 +210,13 @@ export default function Fundraiser() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-
-      {fTheSeo && fTheSeo === true && 
-        <SEOf 
-          title={fundraiserDetails.title}
-          desc={fundraiserDetails.short_desc}
-          img={fundraiserDetails.thumbnail}
-          id={fundraiserDetails._id}
-        />
-      }
+      <SEOf 
+        title='Rebuilding Hope: Help Our Family Rise from the Ashes'
+        desc='Family of six lost everything in a house fire, including our uninsured home. Your support helps us rebuild and heal from this devastating loss.'
+        img='home-in-fire.jpg'
+        id='65b25ac66ac0a9003a45093a'
+      />
+ 
       {/* {a === '1'
       
       && <SEOf 
