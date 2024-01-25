@@ -76,7 +76,6 @@ export default function Fundraiser() {
 
   const { data: fundraiserDetails, isError, isLoading, isSuccess, error } = useGetFundraiserQuery(id);
 
-  console.log(fundraiserDetails);
   const [showBottomButtons, setBottomButtons] = useState<boolean>(false);
 
   
@@ -192,9 +191,16 @@ export default function Fundraiser() {
 
 
   
+  const [fTheSeo, setFTheSeo] = useState<boolean>(false);
 
 
+  useEffect(()=>{
+    if(fundraiserDetails){
+      console.log(fundraiserDetails)
+      setFTheSeo(true);
+    }
 
+  }, [fundraiserDetails]);
   return (
     <>
 
@@ -204,12 +210,14 @@ export default function Fundraiser() {
       </Head>
 
 
-      <SEOf 
-        title='Help Save Little Anna - A Brave Fighter Battling Heart Condition'
-        desc='My daughter, Anna, needs urgent support for a life-saving heart operation. Your generosity can make a difference. Thank you for being there for us.'
-        img='help-to-anna.png'
-        id='65b0a7936ac0a9003a4508f6'
-      />
+      {fTheSeo && fTheSeo === true && 
+        <SEOf 
+          title={fundraiserDetails.title}
+          desc={fundraiserDetails.short_desc}
+          img={fundraiserDetails.thumbnail}
+          id={fundraiserDetails._id}
+        />
+      }
       {/* {a === '1'
       
       && <SEOf 
