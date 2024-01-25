@@ -204,8 +204,13 @@ export default function Fundraiser() {
       </Head>
 
 
-
-      {a === '1'
+      <SEOf 
+        title='Help Save Little Anna - A Brave Fighter Battling Heart Condition'
+        desc='My daughter, Anna, needs urgent support for a life-saving heart operation. Your generosity can make a difference. Thank you for being there for us.'
+        img='help-to-anna.png'
+        id='65b0a7936ac0a9003a4508f6'
+      />
+      {/* {a === '1'
       
       && <SEOf 
         title='Help Save Little Anna - A Brave Fighter Battling Heart Condition'
@@ -213,7 +218,7 @@ export default function Fundraiser() {
         img='help-to-anna.png'
         id='65b0a7936ac0a9003a4508f6'
       />
-      }
+      } */}
 
 
     {/* {id &&  */}
