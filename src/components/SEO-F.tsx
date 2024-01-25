@@ -23,9 +23,9 @@ export default function SEOf(props: ISEOfProps) {
             <NextSeo
                 title={title}
                 description={desc}
-                canonical={`${SITE_URL}/fundraisers/${id}`}
+                canonical={`${SITE_URL}/fundraiser/${id}`}
                 openGraph={{
-                url: `${SITE_URL}/fundraisers/${id}`,
+                url: `${SITE_URL}/fundraiser/${id}`,
                 title: title,
                 description: desc,
                 images: [

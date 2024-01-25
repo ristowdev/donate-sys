@@ -37,13 +37,42 @@ const inter = Inter({ subsets: ['latin'] })
 
 // const Home: React.FC<HomeProps> = ({ fundraiserDetailsPro }) => {
 
+// import type { Metadata, ResolvingMetadata } from 'next'
+ 
+// type Props = {
+//   params: { id: string }
+//   searchParams: { [key: string]: string | string[] | undefined }
+// }
+ 
+// export async function generateMetadata(
+//   { params, searchParams }: Props,
+//   parent: ResolvingMetadata
+// ): Promise<Metadata> {
+//   // read route params
+//   const id = params.id
+ 
+//   // fetch data
+//   const product = await fetch(`https://.../${id}`).then((res) => res.json())
+ 
+//   // optionally access and extend (rather than replace) parent metadata
+//   const previousImages = (await parent).openGraph?.images || []
+ 
+//   return {
+//     title: product.title,
+//     openGraph: {
+//       images: ['/some-specific-page-image.jpg', ...previousImages],
+//     },
+//   }
+// }
+ 
+
 export default function Fundraiser() {
 
   const [shareModelOpened, setShareModelOpened] = useState<Boolean>(false);
   const [allDonationsModelOpened, setAllDonationsModelOpened] = useState<Boolean>(false);
   const router = useRouter();
-  const { id } = router.query;
-
+  const { id, a } = router.query;
+ 
 
   const { data: fundraiserDetails, isError, isLoading, isSuccess, error } = useGetFundraiserQuery(id);
 
@@ -162,6 +191,8 @@ export default function Fundraiser() {
   // const seoThumbnail = fundraiserDetails?.thumbnail || 'social-share-rug.jpg';
 
 
+  
+
 
 
   return (
@@ -171,6 +202,18 @@ export default function Fundraiser() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+
+
+      {a === '1'
+      
+      && <SEOf 
+        title='Help Save Little Anna - A Brave Fighter Battling Heart Condition'
+        desc='My daughter, Anna, needs urgent support for a life-saving heart operation. Your generosity can make a difference. Thank you for being there for us.'
+        img='help-to-anna.png'
+        id='65b0a7936ac0a9003a4508f6'
+      />
+      }
 
 
     {/* {id &&  */}
@@ -202,10 +245,10 @@ export default function Fundraiser() {
 
       {isLoading ? <Loading /> : fundraiserDetails && <>
       
-      <SEOpro 
+      {/* <SEOpro 
         title={fundraiserDetails.title}
         thumbnail={fundraiserDetails.thumbnail}
-      />
+      /> */}
 
       {/* <NextSeo
         title={`Fundraiser by ${fundraiserDetails.organizer} : ${fundraiserDetails.title}`}
