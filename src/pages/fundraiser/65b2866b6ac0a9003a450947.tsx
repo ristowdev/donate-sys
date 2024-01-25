@@ -72,7 +72,7 @@ export default function Fundraiser() {
   const [allDonationsModelOpened, setAllDonationsModelOpened] = useState<Boolean>(false);
   const router = useRouter();
   // const { id, a } = router.query;
-  const id = '65b25ac66ac0a9003a45093a';
+  const id = '65b2866b6ac0a9003a450947';
  
 
   const { data: fundraiserDetails, isError, isLoading, isSuccess, error } = useGetFundraiserQuery(id);
@@ -214,7 +214,7 @@ export default function Fundraiser() {
         title='Rebuilding Hope: Help Our Family Rise from the Ashes'
         desc='Family of six lost everything in a house fire, including our uninsured home. Your support helps us rebuild and heal from this devastating loss.'
         img='home-in-fire.jpg'
-        id='65b25ac66ac0a9003a45093a'
+        id='65b2866b6ac0a9003a450947'
       />
  
       {/* {a === '1'

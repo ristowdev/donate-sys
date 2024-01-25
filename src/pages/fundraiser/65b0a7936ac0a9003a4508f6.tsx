@@ -192,16 +192,16 @@ export default function Fundraiser() {
 
 
   
-  const [fTheSeo, setFTheSeo] = useState<boolean>(false);
+  // const [fTheSeo, setFTheSeo] = useState<boolean>(false);
 
 
-  useEffect(()=>{
-    if(fundraiserDetails){
-      console.log(fundraiserDetails)
-      setFTheSeo(true);
-    }
+  // useEffect(()=>{
+  //   if(fundraiserDetails){
+  //     console.log(fundraiserDetails)
+  //     setFTheSeo(true);
+  //   }
 
-  }, [fundraiserDetails]);
+  // }, [fundraiserDetails]);
   return (
     <>
 
