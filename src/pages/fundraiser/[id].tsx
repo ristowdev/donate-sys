@@ -166,11 +166,11 @@ export default function Fundraiser() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <SEOpro title='RiseUpGram: Donate now.'/> */}
+      <SEOpro title='RiseUpGram: Donate now.'/>
 
 
     {/* {id &&  */}
-      <SEOf 
+      {/* <SEOf 
 
         title={`${
           id === '65b0a7936ac0a9003a4508f6' 
@@ -189,7 +189,7 @@ export default function Fundraiser() {
           : 'social-share-rug.jpg'
         }`}
       
-      />
+      /> */}
       {/* } */}
 
       {/* 65b0a7936ac0a9003a4508f6 */}
