@@ -211,9 +211,9 @@ export default function Fundraiser() {
       </Head>
 
       <SEOf 
-        title='Rebuilding Hope: Help Our Family Rise from the Ashes'
-        desc='Family of six lost everything in a house fire, including our uninsured home. Your support helps us rebuild and heal from this devastating loss.'
-        img='home-in-fire.jpg'
+        title="A Mother's Plea for a Second Chance at Life for Her Boys"
+        desc='Single mom Kate seeks help for vital treatment in Germany to secure a future for her boys. Your support means everything—please consider donating or sharing. Thank you.'
+        img='kate-help.jpg'
         id='65b2866b6ac0a9003a450947'
       />
  
