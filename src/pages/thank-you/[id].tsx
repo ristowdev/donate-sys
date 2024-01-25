@@ -18,6 +18,7 @@ export default function ThankYou() {
     useEffect(()=>{
         refetch();
     },[]);
+    // help-to-anna.png
 
 
     function formatDonationAmount(inputValue: number) {
@@ -158,7 +159,8 @@ export default function ThankYou() {
                                     value={response?.message || donation_details.message}
                                     disabled={true}
                                     style={{
-                                        lineHeight:'1.5'
+                                        lineHeight:'1.5',
+                                        color:'black'
                                     }}
                                 ></textarea>
                                 
@@ -178,7 +180,8 @@ export default function ThankYou() {
                                     onChange={(e)=>{setMessage(e.target.value)}}
                                     value={message}
                                     style={{
-                                        lineHeight:'1.5'
+                                        lineHeight:'1.5',
+                                        color:'black'
                                     }}
                                 ></textarea>
 
@@ -273,6 +276,9 @@ export default function ThankYou() {
                         id="numericInput" 
                         disabled
                         value={donation_details.amount}
+                        style={{
+                            color:'black'
+                        }}
                     />
                     <div className='dpspaql'>
                         <span>.00</span> 

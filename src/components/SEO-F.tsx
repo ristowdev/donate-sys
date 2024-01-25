@@ -3,28 +3,34 @@ import { FILES_URL, SITE_URL } from '../../config';
 import { NextSeo } from 'next-seo';
 
 
-interface ISEOProProps{ 
+interface ISEOfProps{ 
     title:string;
+    id?:string;
+    desc:string;
+    img:string;
 }
 
-export default function SEOpro(props: ISEOProProps) {
+export default function SEOf(props: ISEOfProps) {
     const { 
         title,
+        id,
+        desc,
+        img
     } = props;
      
 
     return (<>
             <NextSeo
                 title={title}
-                description={"Join our crowdfunding community to support and fund meaningful causes. Start or contribute to campaigns that make a difference."}
-                canonical={SITE_URL}
+                description={desc}
+                canonical={`${SITE_URL}/fundraisers/${id}`}
                 openGraph={{
-                url: SITE_URL,
+                url: `${SITE_URL}/fundraisers/${id}`,
                 title: title,
-                description: 'Join our crowdfunding community to support and fund meaningful causes. Start or contribute to campaigns that make a difference.',
+                description: desc,
                 images: [
                     {
-                        url: `${FILES_URL+'/social-share-rug.jpg'}`,
+                        url: `${FILES_URL}/${img}`,
                         width: 800,
                         height: 600,
                         alt: '',

@@ -28,6 +28,7 @@ import { NextSeo } from 'next-seo'
 import { GetServerSideProps } from 'next'
 import SEOpro from '@/components/SEO-pro'
 import Cookies from 'js-cookie';
+import SEOf from '@/components/SEO-F'
 
 const inter = Inter({ subsets: ['latin'] })
 // interface HomeProps {
@@ -165,7 +166,33 @@ export default function Fundraiser() {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <SEOpro title='RiseUpGram: Donate now.'/>
+      {/* <SEOpro title='RiseUpGram: Donate now.'/> */}
+
+
+    {/* {id &&  */}
+      <SEOf 
+
+        title={`${
+          id === '65b0a7936ac0a9003a4508f6' 
+            ? 'Help Save Little Anna - A Brave Fighter Battling Heart Condition' 
+            : 'RiseUpGram: Donate now.'
+        }`}
+        id={String(id)}
+        desc={`${
+          id === '65b0a7936ac0a9003a4508f6' 
+          ? 'My daughter, Anna, needs urgent support for a life-saving heart operation. Your generosity can make a difference. Thank you for being there for us.' 
+          : 'Join our crowdfunding community to support and fund meaningful causes. Start or contribute to campaigns that make a difference.'}`
+        }
+        img={`${
+          id === '65b0a7936ac0a9003a4508f6'
+          ? 'help-to-anna.png' 
+          : 'social-share-rug.jpg'
+        }`}
+      
+      />
+      {/* } */}
+
+      {/* 65b0a7936ac0a9003a4508f6 */}
       
 
 
