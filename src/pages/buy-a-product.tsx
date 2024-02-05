@@ -75,7 +75,7 @@ export default function BuyAProduct() {
             return;
         }
       
-        if(Number(inputValue) > 500){
+        if(Number(inputValue) > 250){
 
             window.scrollTo(0, 0);
             if (inputRef.current) {
@@ -125,7 +125,7 @@ export default function BuyAProduct() {
 
 
   useEffect(()=>{
-    if(Number(inputValue) > 500){ 
+    if(Number(inputValue) > 250){ 
         setErrorDonationValue(true);
     }else{
         setErrorDonationValue(false);
@@ -169,7 +169,7 @@ export default function BuyAProduct() {
                 </div>
                 <div className='lpxppapppp'>
                   <h2>You're supporting: Help Save Little Anna - A Brave Fighter Battling Heart Condition - PDF</h2>
-                  <h4>Price: $1 - $500</h4>
+                  <h4>Price: $1 - $250</h4>
                 </div>
               </div>
               <div className='lpx--palpsl'>
@@ -231,7 +231,7 @@ export default function BuyAProduct() {
                         <div className='cp1pdl'>
                             <CiWarning size={22} color='#cf364a'/>
                         </div>
-                        <span>The limit is $500.00, thank you!</span>
+                        <span>The limit is $250.00, thank you!</span>
                     </div>
                 }
             </div>

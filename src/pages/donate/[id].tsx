@@ -44,6 +44,7 @@ export default function Donate() {
     const [anonymousDonate, setADonate] = useState<boolean>(false);
     const [loadingPro, setLoadingPro] = useState<boolean>(false);
     const [enterValError, setEnterValError] = useState<boolean>(false);
+    const [enterValErrorm, setEnterValErrorM] = useState<boolean>(false);
     const [oExplain, setOpenExplain] = useState(false);
     const [message, setMessage] = useState<string>('');
     const [fundraiserDetails, setFundraiserDetails] = useState<FundraiserData>();
@@ -85,6 +86,7 @@ export default function Donate() {
           if (!isNaN(parsedValue) && parsedValue >= 1 && inputValueRaw.length<=3) {
             setInputValue(String(parsedValue));
             setEnterValError(false);
+            setEnterValErrorM(false);
 
           } else if (sanitizedValue === '') {
             // Allow empty input for easier deletion
@@ -99,11 +101,11 @@ export default function Donate() {
     
 
   useEffect(()=>{
-    if(Number(inputValue) > 500){ 
+    if(Number(inputValue) > 250){ 
         setErrorDonationValue(true);
     }else{
         setErrorDonationValue(false);
-    }
+    } 
   }, [inputValue])
 
 
@@ -144,8 +146,17 @@ export default function Donate() {
             }
             return;
         }
+
+        if(Number(inputValue) < 3){
+            setEnterValErrorM(true);
+            window.scrollTo(0, 0);
+            if (inputRef.current) {
+              inputRef.current.focus();
+            }
+            return;
+        }
       
-        if(Number(inputValue) > 500){
+        if(Number(inputValue) > 250){
 
             window.scrollTo(0, 0);
             if (inputRef.current) {
@@ -209,6 +220,11 @@ export default function Donate() {
       
         return formattedAmount;
     }
+
+
+    useEffect(()=>{
+        document.documentElement.classList.remove('body-scroll-lock');
+    },[]);
 
   return (
     <>
@@ -293,7 +309,7 @@ export default function Donate() {
                 <div className='cpapl1'>
                     <span>Enter your donation</span>
                 </div>
-                    <div className={`cpapcplsal1112 ${(isErrorDNValue || enterValError) && 'error'}`}>
+                    <div className={`cpapcplsal1112 ${(isErrorDNValue || enterValError || enterValErrorm) && 'error'}`}>
 
                     <div className='cpa1l2'>
                         <span>$</span>
@@ -318,7 +334,7 @@ export default function Donate() {
                         <div className='cp1pdl'>
                             <CiWarning size={22} color='#cf364a'/>
                         </div>
-                        <span>Donation limit is $500.00</span>
+                        <span>Donation limit is $250.00</span>
                     </div>
                 }
 
@@ -328,6 +344,16 @@ export default function Donate() {
                             <CiWarning size={22} color='#cf364a'/>
                         </div>
                         <span>Please enter a donation amount</span>
+                    </div>
+                }
+
+
+                {enterValErrorm && 
+                    <div className='spdp11'>
+                        <div className='cp1pdl'>
+                            <CiWarning size={22} color='#cf364a'/>
+                        </div>
+                        <span>Donation amount must be at least $3.00</span>
                     </div>
                 }
             </div>

@@ -5,7 +5,7 @@ export async function getAllProducts() {
   return shopifyFetch({
     query: `
       {
-        products(first: 100) {
+        products(first: 250) {
           edges {
             node {
               id
