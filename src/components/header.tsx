@@ -21,6 +21,24 @@ export default function Header(props: IHeaderProps) {
 
     return (<>
 
+    <Head>
+
+    <script
+                    async
+                    src="https://www.googletagmanager.com/gtag/js?id=G-MVSGWPKKQK"
+                />
+
+                <script
+                    dangerouslySetInnerHTML={{
+                    __html: `
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag(){dataLayer.push(arguments);}
+                            gtag('js', new Date());
+                            gtag('config', 'G-MVSGWPKKQK');
+                        `,
+                    }}
+                />
+    </Head>
         {!noFixed &&
         <div className='header-spacer'>
 

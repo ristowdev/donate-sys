@@ -12,6 +12,26 @@ export default function FHeader(props: IFHeaderProprs) {
         className
     } = props;
     return (<>
+
+<Head>
+
+<script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-MVSGWPKKQK"
+            />
+
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-MVSGWPKKQK');
+                    `,
+                }}
+            />
+</Head>
+
     <div className='fheader-clasp'> 
 
 <div className='lxp-alpxla'>

@@ -63,6 +63,24 @@ export default function HeaderNew(props: IHeaderProps) {
 
     return (<>
 
+<Head>
+
+<script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-MVSGWPKKQK"
+            />
+
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-MVSGWPKKQK');
+                    `,
+                }}
+            />
+</Head>
         <div className='dsa-dsqszddqd lpdlsapldaassa' ref={buttonListRef}>
             <div className='container'>
                 <div className='wrapper'>

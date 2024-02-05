@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useRef } from "react";
 import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import { SITE_URL } from "../../config";
-
+import Head from "next/head";
 
 interface IPaymentHeaderProps{
     fundraiserId:string; 
@@ -15,6 +15,24 @@ export default function PaymentHeader(props: IPaymentHeaderProps) {
 
     return (<>
 
+<Head>
+
+<script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-MVSGWPKKQK"
+            />
+
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-MVSGWPKKQK');
+                    `,
+                }}
+            />
+</Head>
 
         <div className="dlpsald">
           <div className="container">

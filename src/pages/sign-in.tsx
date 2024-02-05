@@ -22,6 +22,23 @@ export default function Sigin() {
       <Head> 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+ 
+
+<script
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-MVSGWPKKQK"
+            />
+
+            <script
+                dangerouslySetInnerHTML={{
+                __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-MVSGWPKKQK');
+                    `,
+                }}
+            /> 
       </Head> 
 
       <SEOpro title='RiseUpGram: Sign in'/>
