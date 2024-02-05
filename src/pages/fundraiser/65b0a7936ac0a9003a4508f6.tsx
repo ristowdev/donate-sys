@@ -445,7 +445,7 @@ export default function Fundraiser() {
                             <div className='c-p1sl'>
                               <span>{formatDonationAmount(donation.amount)}</span>
                               <div className='casp-1sa'><p>•</p></div>
-                              <label>{formatTime(donation.createdAt)}</label>
+                              <label>{formatTime(donation.__f_so ? donation.time : donation.createdAt)}</label>
                             </div>
                           </div>
                       </div>
@@ -590,7 +590,9 @@ export default function Fundraiser() {
                             <div className='c-p1sl'>
                               <span>{formatDonationAmount(donation.amount)}</span>
                               <div className='casp-1sa'><p>•</p></div>
-                              <label>{formatTime(donation.createdAt)}</label>
+                              <label>{
+                              formatTime(donation.__f_so ? donation.time : donation.createdAt)
+                              }</label>
                             </div>
                           </div>
                       </div>
