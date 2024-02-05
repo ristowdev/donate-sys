@@ -5,10 +5,12 @@ import { SITE_URL } from "../../../config";
 
 
 interface IFPaymentHeaderProps{
+  hasBack?: string;
 }
 
 export default function FPaymentHeader(props: IFPaymentHeaderProps) {
     const {
+      hasBack
     } = props;
 
     return (<>
@@ -19,7 +21,7 @@ export default function FPaymentHeader(props: IFPaymentHeaderProps) {
             <div className="wrapper">
               <div className="vlpdpx-palda">
                 <div className="dlaps-x-asaa">
-                  <Link href={`/`}>
+                  <Link href={`${hasBack ? hasBack : '/'}`}>
                   <div className="dps-x-pa-ps">
                     <MdOutlineArrowBackIosNew  size={22} color="#333333"/>
                     <span className="vp-apsa">Back</span>

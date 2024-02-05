@@ -94,7 +94,13 @@ export default function AllDonationsModal(props: IAllDonationsModalProps) {
                     
 
                         {/* {Array.from({ length: 3 }, (_, index) => ( */}
-                    {fundraiserDetails.donations.slice(0, visibleItems).map((wos: any, index:number) => (
+                    {fundraiserDetails.donations.slice(0, visibleItems)
+                      // .sort((a: any, b:any) => {
+                      //   const timeA = a.__f_so ? Date.parse(a.time) : Date.parse(a.createdAt);
+                      //   const timeB = b.__f_so ? Date.parse(b.time) : Date.parse(b.createdAt);
+                      //   return timeB - timeA;
+                      // })
+                      .map((wos: any, index:number) => (
                         <>
                             <div className='vpdps-1sdq'>
                                 <div className='vlisd-vsd1'>
@@ -109,7 +115,9 @@ export default function AllDonationsModal(props: IAllDonationsModalProps) {
                                 <div className='c-p1sl'>
                                     <span>{formatDonationAmount(wos.amount)}</span>
                                     <div className='casp-1sa'><p>•</p></div>
-                                    <label>{formatTime(wos.createdAt)}</label>
+                                    {/* <label>{formatTime(wos.createdAt)}</label> */}
+                                    <label>{formatTime(wos.__f_so ? wos.time : wos.createdAt)}</label>
+
                                 </div>
                                 </div>
                             </div>

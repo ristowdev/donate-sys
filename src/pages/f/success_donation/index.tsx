@@ -100,7 +100,7 @@ export default function ThankYou() {
                 <FPaymentHeader /> 
 
 
-                
+                    
 
                 <div className='dpq-dqwlsls'>
 

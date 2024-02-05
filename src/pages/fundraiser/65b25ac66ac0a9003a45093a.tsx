@@ -407,7 +407,8 @@ export default function Fundraiser() {
 
                     <div className='dsb-b-do'>
                       <button onClick={()=>{
-                            router.push(`/donate/${fundraiserDetails._id}`)
+                            // router.push(`/donate/${fundraiserDetails._id}`)
+                            alert("This fundraiser is not accepting donations at the moment.")
                         }}>Donate</button>
                     </div>
 
@@ -419,7 +420,14 @@ export default function Fundraiser() {
 
                   <div className='xlpzpappa'>
                     <div className='zlpapsld'>
-                        <h1>Donations <button onClick={()=>{setAllDonationsModelOpened(true)}}>({formatNumber(fundraiserDetails.total_donations)})</button></h1>
+                        <h1>Donations <button onClick={()=>{
+                          // setAllDonationsModelOpened(true)
+                      alert("This fundraiser is not accepting donations at the moment.")
+                        
+                        }
+                        
+                        }
+                          >({formatNumber(fundraiserDetails.total_donations)})</button></h1>
                     </div>
                     <div className='dfgvbfv4 pfpdsa'>
                       <div className='vmnbmfk'>
@@ -453,7 +461,12 @@ export default function Fundraiser() {
                     </div>
                     
                     <div className='clspaq-pwqqqq'>
-                      <button onClick={()=>{setAllDonationsModelOpened(true)}}>See all</button>
+                      <button onClick={()=>{
+                        
+                        // setAllDonationsModelOpened(true)
+                        alert("This fundraiser is not accepting donations at the moment.")
+                      
+                      }}>See all</button>
                     </div>
                   </div>
 
@@ -553,7 +566,10 @@ export default function Fundraiser() {
                       </div>  
                       <div className='vlpvs--dcspcs-cd1cwdf-1'>
                         <button onClick={()=>{
-                            router.push(`/donate/${fundraiserDetails._id}`)
+                            // router.push(`/donate/${fundraiserDetails._id}`)
+
+                            alert("This fundraiser is not accepting donations at the moment.")
+
                         }}>Donate now</button>
                       </div>  
                   </div>
@@ -593,7 +609,12 @@ export default function Fundraiser() {
                   </div>
                   
                   <div className='clspaq-pwqqqq'>
-                    <button onClick={()=>{setAllDonationsModelOpened(true)}}>See all</button>
+                    <button onClick={()=>{
+                      
+                      // setAllDonationsModelOpened(true)
+                      alert("This fundraiser is not accepting donations at the moment.")
+                    
+                    }}>See all</button>
                   </div>
 
                 </div>

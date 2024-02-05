@@ -126,7 +126,12 @@ export default function Home() {
                     <div className='dpdpdpdpdppp azlal'>
 
                         <div className='rp-ba-d-n-btn'>
-                          <button><span style={{color:'white'}}>Donate now</span>
+                          <button 
+                            onClick={()=>{
+
+                              router.push(`/fundraisers`)
+                            }} 
+                          ><span style={{color:'white'}}>Donate now</span>
                             <div className='rpbdn-btn'>
                             <IoMdArrowDown color="#043F2E" size={28} className='sdpap-ss--acv'/>
                             </div>
@@ -321,7 +326,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='container-2'> 
+      {/* <div className='container-2'> 
         <div className='wrapper-2'> 
 
           <div className='secound-section'>
@@ -494,7 +499,7 @@ export default function Home() {
               </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
 
       <div className='third-section'>

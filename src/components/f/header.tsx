@@ -32,12 +32,12 @@ export default function FHeader(props: IFHeaderProprs) {
                     <Link href="/#about-us">About us</Link>
                 </div>
                 <div className='zxlpalpsl-ls1'>
-                    <Link href="/#product">Product</Link>
+                    <Link href="/buy-a-product">Product</Link>
                 </div>
                 <div className='zxlpalpsl-ls1 daskxlal dosaoaopp'>
-                    <Link href="/#book-a-call">
+                    <Link href="/buy-a-product">
                         <button>
-                        Book a call
+                        Buy now
                         </button></Link>
                 </div>
             </div>

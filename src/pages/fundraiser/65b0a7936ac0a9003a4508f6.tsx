@@ -162,7 +162,7 @@ export default function Fundraiser() {
 
 
   function formatNumber(number: number): string {
-      if (number >= 10000) {
+      if (number) {
           const formattedNumber = (number / 1000).toFixed(1);
           return `${formattedNumber}K`;
       }
@@ -419,7 +419,7 @@ export default function Fundraiser() {
 
                   <div className='xlpzpappa'>
                     <div className='zlpapsld'>
-                        <h1>Donations <button onClick={()=>{setAllDonationsModelOpened(true)}}>({formatNumber(fundraiserDetails.total_donations)})</button></h1>
+                        <h1>Donations <button onClick={()=>{setAllDonationsModelOpened(true)}}>({fundraiserDetails.total_donations})</button></h1>
                     </div>
                     <div className='dfgvbfv4 pfpdsa'>
                       <div className='vmnbmfk'>
@@ -487,7 +487,14 @@ export default function Fundraiser() {
                       
 
                       {/* {filteredDonations.map((wos:any)=>( */}
-                      {filteredDonations.slice(0, visibleItems).map((wos: any, index:number) => (
+                      {/* {filteredDonations.slice(0, visibleItems).map((wos: any, index:number) => ( */}
+                      {filteredDonations.slice(0, visibleItems)
+                        // .sort((a: any, b:any) => {
+                        //   const timeA = a.__f_so ? Date.parse(a.time) : Date.parse(a.createdAt);
+                        //   const timeB = b.__f_so ? Date.parse(b.time) : Date.parse(b.createdAt);
+                        //   return timeB - timeA;
+                        // })
+                        .map((wos: any, index: number) => (
                         <>
                           <div className='cps-wos-ld-ds' key={index}>
                             <div className='vl-d-qq'>
@@ -502,7 +509,7 @@ export default function Fundraiser() {
                               <div className='clvpd-1pa'>
                                 <span>{formatDonationAmount(wos.amount)}</span>
                                 <div className='vlvpdds111'><p>•</p></div>
-                                <label>{formatTime(wos.createdAt)}</label>
+                                <label>{formatTime(wos.__f_so ? wos.time : wos.createdAt)}</label>
                               </div>
 
                               <div className='dff31dsax-sad'>

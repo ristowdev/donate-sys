@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 interface IButtonsStickyProps{
     fundraiserDetails: any;
     setShareModelOpened: Dispatch<React.SetStateAction<any>>;
+    notAtTheMoment?: boolean;
 }
 
 type Dispatch<A> = (value: A) => void;
@@ -19,7 +20,8 @@ export default function ButtonsSticky(props: IButtonsStickyProps) {
 
     const {
         fundraiserDetails,
-        setShareModelOpened
+        setShareModelOpened,
+        notAtTheMoment
     } = props;
 
     const router = useRouter();
@@ -72,7 +74,11 @@ export default function ButtonsSticky(props: IButtonsStickyProps) {
                 </div>  
                 <div className='vlpvs--dcspcs-cd1cwdf-1' ref={buttonListRef}>
                   <button onClick={()=>{
+                    if(!notAtTheMoment){
                       router.push(`/donate/${fundraiserDetails._id}`)
+                    }else{
+                      alert("This fundraiser is not accepting donations at the moment.")
+                    }
                   }}>Donate now</button>
                 </div>  
             </div>
@@ -86,7 +92,13 @@ export default function ButtonsSticky(props: IButtonsStickyProps) {
                     </div>  
                     <div className='vlpvs--dcspcs-cd1cwdf-1 lflsls' ref={buttonListRef}>
                     <button onClick={()=>{
+                        // router.push(`/donate/${fundraiserDetails._id}`)
+
+                      if(!notAtTheMoment){
                         router.push(`/donate/${fundraiserDetails._id}`)
+                      }else{
+                        alert("This fundraiser is not accepting donations at the moment.")
+                      }
                     }}>Donate now</button>
                     </div>  
                 </div>
