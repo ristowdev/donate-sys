@@ -211,9 +211,9 @@ export default function Fundraiser() {
       </Head>
 
       <SEOf 
-        title='Help Save Little Anna - A Brave Fighter Battling Heart Condition'
-        desc='My daughter, Anna, needs urgent support for a life-saving heart operation. Your generosity can make a difference. Thank you for being there for us.'
-        img='help-to-anna.png'
+        title='A Brave Fighter Battling Heart Condition'
+        desc='Anna, needs urgent support. Your generosity can make a difference. Thank you for being there for us.'
+        img='help-to-anna-blur-1.png'
         id='65b0a7936ac0a9003a4508f6'
       />
  
